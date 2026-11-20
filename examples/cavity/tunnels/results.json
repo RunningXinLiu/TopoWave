@@ -1,0 +1,59 @@
+{
+  "analysis_options": {
+    "right": true,
+    "gated": true,
+    "spatial_weighting": "equal",
+    "min_offset": 0.0,
+    "max_offset": 0.0,
+    "vslow": 380.0,
+    "vfast": 650.0,
+    "pad": 0.035,
+    "fmin": 15.0,
+    "fmax": 45.0,
+    "cmin": 300.0,
+    "cmax": 800.0,
+    "dc": 1.0
+  },
+  "entries": {
+    "aeb95c4e201d6c0536ae8181060537a6b4a47285241961bdcb64888d454dc20f": {
+      "label": "浅埋隧道 · 圆形 · 空气 · 直径 16 m",
+      "locator": "tunnels/circle_air",
+      "result_sha256": "9d5168fdc263c5500fbd1e46998cf7982c64deb3a9150284c1c043e673cddbea"
+    },
+    "6e2a21de5c8ba79673431d77ce8fad588fba8b19c25fe19d4947ac246514f831": {
+      "label": "浅埋隧道 · 圆形 · 无牵引干洞 · 直径 16 m",
+      "locator": "tunnels/circle_dry",
+      "result_sha256": "96dd83e031dc841cb8ad58477a705fb72f9f09ef9427d481944d22d23135f82c"
+    },
+    "f321dfc37df8278e397903d8b11e7735bbe8c94ddf0a052e09fb54e097181b8d": {
+      "label": "浅埋隧道 · 圆形 · 满水 · 直径 16 m",
+      "locator": "tunnels/circle_water",
+      "result_sha256": "53f16dde802dff0ff1095786f6fb3f675add565ff8f663c2fe01f7586434852f"
+    },
+    "b132f63ac28cadc1e99f5b2b06679c9c0cf1146aeeb1ace1fb361f5a7ec0a65c": {
+      "label": "浅埋隧道 · 长方形 · 空气 · 20 × 10 m",
+      "locator": "tunnels/rect_air",
+      "result_sha256": "9b7737be85b1991c6450d12d49e84174956ce7b31853e99038b6f09781ae8fc6"
+    },
+    "038d020a1d28856d34d9f9c86516e09f68882715a367684657fa43f0c2ca32a5": {
+      "label": "浅埋隧道 · 长方形 · 无牵引干洞 · 20 × 10 m",
+      "locator": "tunnels/rect_dry",
+      "result_sha256": "95e504d148290d4dc8e8a4f72523b63b6a3a695376141b1d594f9d12e379ebd9"
+    },
+    "c88a929d2a7f6cb7762a0499d4e8cc0ad02cd880f2bbbea471ab2c4ba3647f80": {
+      "label": "浅埋隧道 · 长方形 · 满水 · 20 × 10 m",
+      "locator": "tunnels/rect_water",
+      "result_sha256": "8d5eb12d17b848684ef169e690898f8c0c83282240ee033acdc6f39f174e31ee"
+    },
+    "9f08d5e9be6febfeacd44a32939348478225dbcd2f96877d0860a5af350acf27": {
+      "label": "浅埋隧道 · 尺寸对照 · 空气圆洞 · 直径 8 m",
+      "locator": "tunnels/circle_air8",
+      "result_sha256": "57ba1e17b5b6e42c15f36a3bec35fe3c138dc6216dca9109a0f4aa17dcee5256"
+    },
+    "263a23d233a8f79d55eab47d6d7689b1201c21534afaf4c2b1968b4700025f15": {
+      "label": "浅埋隧道 · 空气圆洞 · 直径 16 m · 孔径 320 m",
+      "locator": "tunnels/circle_air320",
+      "result_sha256": "ffe88590e4b34af4378b8addd79635bde4125a6019d81891865e50f6c38ab72b"
+    }
+  }
+}

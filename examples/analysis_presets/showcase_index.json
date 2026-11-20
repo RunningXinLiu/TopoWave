@@ -1,0 +1,306 @@
+{
+  "schema": 1,
+  "entries": [
+    {
+      "file": "showcase_iso_flat.json",
+      "preset_sha256": "ae40f90ed6ba1ee981689190dc5f503a35311779f22ef5c2c417db9c7b0b7f2e",
+      "record_sha256": "9d305c1d07de547f00704ccfd947cc55aaa393f23b5da0014a908b98e66c57b3",
+      "model_sha256": "4c79a6f1dec540b009c32258a9953294bac1e1ac9bea729ea0b708fe22a101ba",
+      "scope": "Declared window covers recorded times; selected waveforms inspected; no claim of pure surface waves or all-mode acceptance."
+    },
+    {
+      "file": "showcase_iso_hill.json",
+      "preset_sha256": "7d7f0ba6a261961deff9d52e8f8966596be16bdb5c63c4c91c471b184d55c65a",
+      "record_sha256": "f83b6a54f714e6c3e08ec0a747b84b5a1844c19063582445afe9d0b996e46ec2",
+      "model_sha256": "4cb75f1b0fbf1ed3fed537a77ca93841152a9ee3124a3af3e2afb75ad914f582",
+      "scope": "Declared window covers recorded times; selected waveforms inspected; no claim of pure surface waves or all-mode acceptance."
+    },
+    {
+      "file": "showcase_vti_flat.json",
+      "preset_sha256": "6a2f56a3c4dc68845d1af8900a4f010006774d5660d4d8f9e56dc61716c8ce21",
+      "record_sha256": "48eac6b7435dd2253fb71bbe0a6bff765338dc3771c2677b4c76313b3ca52e66",
+      "model_sha256": "4d1e68e3743e56e761d53bb4c149518a85b38563fe8070eae936e69318948228",
+      "scope": "Declared window covers recorded times; selected waveforms inspected; no claim of pure surface waves or all-mode acceptance."
+    },
+    {
+      "file": "showcase_hti_flat.json",
+      "preset_sha256": "e2dd6ae84b731e26e3bf5b0717f7ec1ef2eb6a84bd4fd84b5965bb581c14036a",
+      "record_sha256": "e3be74cae649a2da06d3565917fd0ee3fb5f9b7cbcd7ab29949801497a565b86",
+      "model_sha256": "f7599fe428bfdf2ebf8fc68a1d3917be2806f2db5c2f540b58a2be134d1492bb",
+      "scope": "Declared window covers recorded times; selected waveforms inspected; no claim of pure surface waves or all-mode acceptance."
+    },
+    {
+      "file": "showcase_q_flat.json",
+      "preset_sha256": "2f4a11babffc45b4d4a55e2f1d8a66d1becf3fcb96486b53edc68db7f079e070",
+      "record_sha256": "ca49b047611c57010d292fff6587abd41c2903f046e2e40f9452c105b9e424e1",
+      "model_sha256": "b863b94bcd664ac57a6b2e2872aae5725f29684595c7fc112f6b58a453abe209",
+      "scope": "Declared window covers recorded times; selected waveforms inspected; no claim of pure surface waves or all-mode acceptance."
+    },
+    {
+      "file": "showcase_air_cavity.json",
+      "preset_sha256": "e1a1decf67f24c34cf08f1108cdf748789c6e22b3879eba3ed967484d1d8872c",
+      "record_sha256": "4391afdb55758fa58c326b6e325e7f9c227fb1856dce55db5cdd4a2fc4188765",
+      "model_sha256": "639a2fe2ce02d68bbd98cf667418c1ac15a41a8148d656bd05eeee342c5349e2",
+      "scope": "Declared window covers recorded times; selected waveforms inspected; no claim of pure surface waves or all-mode acceptance."
+    },
+    {
+      "file": "showcase_hill_water.json",
+      "preset_sha256": "cf021c300ea466a79bffe257d1a9b6645f5a4fa8b8ac944d84e6bc74e6d9a384",
+      "record_sha256": "0d2fd2bee5ddd1d5d02f5e19fc2b04e39de33cef1557a94df90882314e379a31",
+      "model_sha256": "b7cf6c2b28ab0fb89ebca61493c8ecef2dbd40d29ef2f3a3e791a9b733e587b9",
+      "scope": "Declared window covers recorded times; selected waveforms inspected; no claim of pure surface waves or all-mode acceptance."
+    },
+    {
+      "file": "showcase_vti_array300.json",
+      "preset_sha256": "1292c3cca7a04c97276207cb915be3cd081a1b06a92032cd90e14e6a6bba9d38",
+      "model_sha256": "b34a2cdcb76d992b49b57ee755f9f3976c71a222e7bd131f50f7ded7cfd6b264",
+      "record_sha256": "be749756883d082f7e448b8b5d75eb5551b25f9140e4becd15f12a8be62dee2b"
+    },
+    {
+      "file": "showcase_hti_array300.json",
+      "preset_sha256": "60bbb7045e41e21c821730228988d6ec9406c04bb50e22fab1a91d7bcc7f79a8",
+      "model_sha256": "5b287a2b74dcd8c28d3373571424c97edf1e705eebd88e82fdd9ed8c4eee1ab2",
+      "record_sha256": "221105c6c4cb97e53245f73ab7008a058f549b699c895619a4a76e9df1b3547d"
+    },
+    {
+      "file": "showcase_q_array300.json",
+      "preset_sha256": "67b85f3bd56239e0fbeeea2bcdf24cdbd3582166a92de8488cc236fd270f9937",
+      "model_sha256": "3b0c6b92a408d8cfd4dbdf1d84817500b24d00cefcf153be9e8d6928ca131614",
+      "record_sha256": "0ef9a4ab505075709b3f8798d554ab9b9ff9e72a9349361a804c6fa149657bc8"
+    },
+    {
+      "file": "showcase_attenuation_hill_array300.json",
+      "preset_sha256": "8d77d33ff21be175744ebed2a0d08d81ec766806528b649c643ddb7dc9059aae",
+      "model_sha256": "db07ef6433c3275e49c47c9849a15a203cf21873cc17d598cdc9e09306cd4ac6",
+      "record_sha256": "43bae7438335e886d7f1158c8bb4f40075db62589cffe51dde8979e21be49385"
+    },
+    {
+      "file": "showcase_vti_hill_array300.json",
+      "preset_sha256": "6e0fb7dd68e113f09a81f9b129261febe5f75af2520c3e32491fa944348ecec6",
+      "model_sha256": "d8c52387939d78b4b77b93f991ce3caa681ac661783f256143005a0a94a4a08f",
+      "record_sha256": "0c83be74581b204d0e9b7ed40157b5c148fde6e2d0d9d3d6b650a0279730ddbd"
+    },
+    {
+      "file": "showcase_hti_hill_array300.json",
+      "preset_sha256": "b0da75bcedd924b4f3c0038529ec7c8f2dc51d50bade2cab67a15c301138a332",
+      "model_sha256": "03a38bb3703204531257bc8adea2073a227d8043a0ce2031c97356ae7ba95d4c",
+      "record_sha256": "18769620102261c404d8893d8638a74c1dbece2b7350ae2cf044818011d89a28"
+    },
+    {
+      "file": "showcase_air_demo300.json",
+      "preset_sha256": "4ccda0ee2ee192b4564659f48a9701de2bcce11b58e58d56ca68ed4fdc9c8811",
+      "model_sha256": "eb39ad4473d7c880d271dae721966fd28bdace53038bb4417288ad44f4209c90",
+      "record_sha256": "a6be03a1cc271e3bc7d4c31d2c7ac88cb12e8dc20d66c3f331570899749daba3"
+    },
+    {
+      "file": "computed600_iso_flat.json",
+      "preset_sha256": "0f02490253ff6fff0e0a4e9d9495a98f58206570b7e6539bbe41d6cc6d5bea15",
+      "record_sha256": "d9cebc7061a4233ae3906810ddf725a129da72e95ead5a2524fdff458043631e",
+      "model_sha256": "70fd5c947a501c04bfb440c7272f3c85908e05a11498e983bd0ed1f9b073f6ac",
+      "scope": "600 m等权；完整记录和PS/FH图已查看。历史重叠检查不等于全部新增远道/晚段的独立精度验收；仍有旁瓣。"
+    },
+    {
+      "file": "computed600_iso_hill.json",
+      "preset_sha256": "594b2ef0480f91586c2fb3ca6a1d2e2b23fdc303f92d7f988ddef4e8c0629bdc",
+      "record_sha256": "98b5961c654c2a166877c0f19d07d25e7112e39ee518691c78bc322e749bb3b9",
+      "model_sha256": "9da5925d08e518ebc15ee0b728ee5e533ba71e98577d6db96ca8071e8f5169db",
+      "scope": "600 m等权；完整记录和PS/FH图已查看。历史重叠检查不等于全部新增远道/晚段的独立精度验收；仍有旁瓣。"
+    },
+    {
+      "file": "computed600_q_flat.json",
+      "preset_sha256": "e897b0be442bac968e1739aaa3528d3d3753efe2bffcd6a6f05264409ab4e33a",
+      "record_sha256": "a30a2db2df507f1e4fb74c94555b19bfca98476c6a6ed81108f044efd618b0cd",
+      "model_sha256": "2949d59b80d520b8b8f0bd37361d69dfc850d9acc6eb87c27757a5dd9df3b5c3",
+      "scope": "600 m等权；完整记录和PS/FH图已查看。历史重叠检查不等于全部新增远道/晚段的独立精度验收；仍有旁瓣。"
+    },
+    {
+      "file": "computed600_q_hill.json",
+      "preset_sha256": "34f8f4f3d52d05f8c930369bdeb93103ad54e7b54cd31980d1a81bb0b3bbbc7a",
+      "record_sha256": "a39ecb7e30e24bc56fae57a1853a2075aaefcd0c40e92b521de9da248c576da7",
+      "model_sha256": "055dc75e7e6e53e3e66be86d28ca6ad21bdf9061334e82321650b49cc5826272",
+      "scope": "600 m等权；完整记录和PS/FH图已查看。历史重叠检查不等于全部新增远道/晚段的独立精度验收；仍有旁瓣。"
+    },
+    {
+      "file": "computed600_vti_flat.json",
+      "preset_sha256": "653943d7878952b540cd13dd5cc7b5884cc07efd300cb9d4465b1d35c5dd6848",
+      "record_sha256": "ff8f174f5fdc96ba021cc46c206116e6f5d92b7a66991175823e3a832e16a67f",
+      "model_sha256": "bd8746316f31f947e06706039e27faa8bb644156bf64844e23ed49db75a8b290",
+      "scope": "600 m等权；完整记录和PS/FH图已查看。历史重叠检查不等于全部新增远道/晚段的独立精度验收；仍有旁瓣。 完整600 m独立参考：Vx误差1.1698%超过1%门槛，未整体通过。"
+    },
+    {
+      "file": "computed600_hti_flat.json",
+      "preset_sha256": "88c339abfd79e1d53997267f66c53436de71a64cecf455397dde0fe4760f3f49",
+      "record_sha256": "28010e065481f8ba8d91268373abb51d607f99f3c4e2eb17620325dcb40a0042",
+      "model_sha256": "4140e0ad49aeda7408c64a8508bdab6d30366cc9bc7af665dc1820e52908bc19",
+      "scope": "600 m等权；完整记录和PS/FH图已查看。历史重叠检查不等于全部新增远道/晚段的独立精度验收；仍有旁瓣。"
+    },
+    {
+      "file": "computed600_vti_hill.json",
+      "preset_sha256": "c48bdfb385282a7dad0d82de4ea7961c881bc64a202ddd98020677f3fc9ebb8b",
+      "record_sha256": "0f87c5cd0113de1d3ffbc750d25dcd82522865961d2a5a6f0a295e377a732af0",
+      "model_sha256": "95908bd04519d5c002d0510edc6dcadffaf83c4c7cb2179d595dccc79e7ff864",
+      "scope": "600 m等权；完整记录和PS/FH图已查看。历史重叠检查不等于全部新增远道/晚段的独立精度验收；仍有旁瓣。"
+    },
+    {
+      "file": "computed600_hti_hill.json",
+      "preset_sha256": "e9e5290faf4369de63845a585bc2e370df1a3c793dcd964edf41e4c431ff5ded",
+      "record_sha256": "88395c306c8e120b66b8638a081003862e70c3aacd7ea49a1f799d8d00b3def8",
+      "model_sha256": "ca31d39f5643a9e2ca08c8f16e562bdc316ab755b7185c13197a1fe052912eb3",
+      "scope": "600 m等权；完整记录和PS/FH图已查看。历史重叠检查不等于全部新增远道/晚段的独立精度验收；仍有旁瓣。"
+    },
+    {
+      "file": "computed600_region_elastic_dry_boundary480.json",
+      "preset_sha256": "2f96fbad828b75ef70d8736f58c69ec8032fff1681dddc67012f9582dcc1152f",
+      "record_sha256": "85e2415f7c57bdba9c91766cd35da2f3a60e798c9a11828200708b2f0e2b598d",
+      "model_sha256": "926400bf861c1ebd6e522d8ac2cc822802468d1455c4adb41baf0346906f571b",
+      "scope": "600 m等权；完整记录和PS/FH图已查看。历史重叠检查不等于全部新增远道/晚段的独立精度验收；仍有旁瓣。"
+    },
+    {
+      "file": "computed600_region_air_boundary480.json",
+      "preset_sha256": "2f96fbad828b75ef70d8736f58c69ec8032fff1681dddc67012f9582dcc1152f",
+      "record_sha256": "65913ab9efc56b99ecbd9608cf004381b96955343df4a1978c53ebecfbd6265f",
+      "model_sha256": "926400bf861c1ebd6e522d8ac2cc822802468d1455c4adb41baf0346906f571b",
+      "scope": "600 m等权；完整记录和PS/FH图已查看。历史重叠检查不等于全部新增远道/晚段的独立精度验收；仍有旁瓣。"
+    },
+    {
+      "file": "computed600_region_air_depth12_candidate.json",
+      "preset_sha256": "2f96fbad828b75ef70d8736f58c69ec8032fff1681dddc67012f9582dcc1152f",
+      "record_sha256": "415d6c9d27e2c17388bf8781492c695da457a160f741fac1874eb6fb6741909e",
+      "model_sha256": "926400bf861c1ebd6e522d8ac2cc822802468d1455c4adb41baf0346906f571b",
+      "scope": "600 m等权；完整记录和PS/FH图已查看。历史重叠检查不等于全部新增远道/晚段的独立精度验收；仍有旁瓣。"
+    },
+    {
+      "file": "computed600_region_water_boundary480.json",
+      "preset_sha256": "2f96fbad828b75ef70d8736f58c69ec8032fff1681dddc67012f9582dcc1152f",
+      "record_sha256": "b4b022b61340ddfa955756c267e31a5b480882cde24610799c5a14f7380ea494",
+      "model_sha256": "926400bf861c1ebd6e522d8ac2cc822802468d1455c4adb41baf0346906f571b",
+      "scope": "600 m等权；完整记录和PS/FH图已查看。历史重叠检查不等于全部新增远道/晚段的独立精度验收；仍有旁瓣。"
+    },
+    {
+      "file": "computed600_region_q_dry_trial.json",
+      "preset_sha256": "5083f30c50f004999980c930a8a0a46b9824ccd91ff464ee1ec925b1396f2733",
+      "record_sha256": "27411ba8ac34c0f3fe256a49314782e6f346cc9ccffd8edb99d4a3ff0c36eece",
+      "model_sha256": "349b71dd6486493d5dcf2014743a067d3cf52314e12242d7e9a5add84c278af4",
+      "scope": "600 m等权；完整记录和PS/FH图已查看。历史重叠检查不等于全部新增远道/晚段的独立精度验收；仍有旁瓣。"
+    },
+    {
+      "file": "computed600_region_q_air_boundary480.json",
+      "preset_sha256": "5083f30c50f004999980c930a8a0a46b9824ccd91ff464ee1ec925b1396f2733",
+      "record_sha256": "ae02af37da2393be185ac331616026ffc345fac42aa6825e649c848e9347d684",
+      "model_sha256": "349b71dd6486493d5dcf2014743a067d3cf52314e12242d7e9a5add84c278af4",
+      "scope": "600 m等权；完整记录和PS/FH图已查看。历史重叠检查不等于全部新增远道/晚段的独立精度验收；仍有旁瓣。"
+    },
+    {
+      "file": "computed600_region_q_water_boundary480.json",
+      "preset_sha256": "5083f30c50f004999980c930a8a0a46b9824ccd91ff464ee1ec925b1396f2733",
+      "record_sha256": "abe6067983e7226e55c18f1d3eccf891948b8a698a88d347c44c67e7c3ac7f49",
+      "model_sha256": "349b71dd6486493d5dcf2014743a067d3cf52314e12242d7e9a5add84c278af4",
+      "scope": "600 m等权；完整记录和PS/FH图已查看。历史重叠检查不等于全部新增远道/晚段的独立精度验收；仍有旁瓣。"
+    },
+    {
+      "file": "computed600_region_circle_dry.json",
+      "preset_sha256": "1bf08d188014c6733d51e72325f0b30a817f9f16979abfed3968b34b81af2076",
+      "record_sha256": "e34b4b39d648354330dcf82a2b78778cf2aaf53fd1b4dd37afd38c1b653aa125",
+      "model_sha256": "863d6147f0369a412cdf9d119599cbb0930a05290c6e1368f39a6618399d3fec",
+      "scope": "600 m等权；完整记录和PS/FH图已查看。历史重叠检查不等于全部新增远道/晚段的独立精度验收；仍有旁瓣。"
+    },
+    {
+      "file": "computed600_region_circle_water.json",
+      "preset_sha256": "1bf08d188014c6733d51e72325f0b30a817f9f16979abfed3968b34b81af2076",
+      "record_sha256": "e23577b9ad2f169a2708d8a17f08fc7e2b1277684ea10c54708aad284064efd3",
+      "model_sha256": "863d6147f0369a412cdf9d119599cbb0930a05290c6e1368f39a6618399d3fec",
+      "scope": "600 m等权；完整记录和PS/FH图已查看。历史重叠检查不等于全部新增远道/晚段的独立精度验收；仍有旁瓣。"
+    },
+    {
+      "file": "computed600_region_multi_dry.json",
+      "preset_sha256": "1bf08d188014c6733d51e72325f0b30a817f9f16979abfed3968b34b81af2076",
+      "record_sha256": "fe8d464500b1b9a9a9687afdbea83444201d31462c8c05c800eb966156fa60b8",
+      "model_sha256": "863d6147f0369a412cdf9d119599cbb0930a05290c6e1368f39a6618399d3fec",
+      "scope": "600 m等权；完整记录和PS/FH图已查看。历史重叠检查不等于全部新增远道/晚段的独立精度验收；仍有旁瓣。"
+    },
+    {
+      "file": "computed600_region_multi_fluid.json",
+      "preset_sha256": "1bf08d188014c6733d51e72325f0b30a817f9f16979abfed3968b34b81af2076",
+      "record_sha256": "7cc7859c52392ead98aa96f3317d089497ef3844a3a8f5d9c589c117e65d7e7b",
+      "model_sha256": "863d6147f0369a412cdf9d119599cbb0930a05290c6e1368f39a6618399d3fec",
+      "scope": "600 m等权；完整记录和PS/FH图已查看。历史重叠检查不等于全部新增远道/晚段的独立精度验收；仍有旁瓣。"
+    },
+    {
+      "file": "computed600_region_hill_dry.json",
+      "preset_sha256": "840c46130eddcd9ac25d76ada10af12287884bdf41fa78144779ebad95296b4b",
+      "record_sha256": "f26a3eaab750be45c5723f8a8b0e630fd03e2d18a16323ceb8079c2dd791362f",
+      "model_sha256": "53c6dadf7c9153c179b44300dfa64a37f7935e58dc8b697dde4b3f9d11c0b57f",
+      "scope": "600 m等权；完整记录和PS/FH图已查看。历史重叠检查不等于全部新增远道/晚段的独立精度验收；仍有旁瓣。"
+    },
+    {
+      "file": "computed600_region_hill_water.json",
+      "preset_sha256": "840c46130eddcd9ac25d76ada10af12287884bdf41fa78144779ebad95296b4b",
+      "record_sha256": "238ca42ac2bfb4297c2ea2da0b6550187d7e7c20f305d0df0b0d8d033fe40362",
+      "model_sha256": "53c6dadf7c9153c179b44300dfa64a37f7935e58dc8b697dde4b3f9d11c0b57f",
+      "scope": "600 m等权；完整记录和PS/FH图已查看。历史重叠检查不等于全部新增远道/晚段的独立精度验收；仍有旁瓣。"
+    },
+    {
+      "file": "computed600_air96.json",
+      "preset_sha256": "1c515d13283bbce901dfa0b5c90ddcd4054101109e3bcd8350fde36ec53b6837",
+      "record_sha256": "db9c87ee69305379c3615835176ea8fe2d0626ff980127f3ec4c562908bdca87",
+      "model_sha256": "926400bf861c1ebd6e522d8ac2cc822802468d1455c4adb41baf0346906f571b",
+      "scope": "600 m等权；完整记录和PS/FH图已查看。历史重叠检查不等于全部新增远道/晚段的独立精度验收；仍有旁瓣。 新几何尚缺独立网格/边界收敛验收。"
+    },
+    {
+      "file": "computed600_air240.json",
+      "preset_sha256": "1c515d13283bbce901dfa0b5c90ddcd4054101109e3bcd8350fde36ec53b6837",
+      "record_sha256": "8630b395ac0f7b2773edb192c29ec182a599e7539cfafc9a375e409c742bd779",
+      "model_sha256": "926400bf861c1ebd6e522d8ac2cc822802468d1455c4adb41baf0346906f571b",
+      "scope": "600 m等权；完整记录和PS/FH图已查看。历史重叠检查不等于全部新增远道/晚段的独立精度验收；仍有旁瓣。 新几何尚缺独立网格/边界收敛验收。"
+    },
+    {
+      "file": "computed600_vti_flat_checked.json",
+      "preset_sha256": "b6f2c9f197730bc63e2eb2da9c732d3b0e58bf887abe32db8d15e104f18c55ac",
+      "record_sha256": "0dddaa61f586a061d94756189067e6b56040bb5766acb73dfa05c5fb848a8f4b",
+      "model_sha256": "53c69a28b8cc40f9597ff0da8494a1aa38252ae314663229089bf4e145b9b264",
+      "scope": "600 m/2 m阵列，2.4 s完整记录：对独立VTI参考Vx 0.6601%、Vz 0.6910%；同域h4→h2及等权PS/FH通过本轮门槛。仅限此模型、网格、边界和双精度后端；弱尾波局部误差与旁瓣仍保留，不是任意模型认证。"
+    },
+    {
+      "file": "layered_terrain_flat.json",
+      "preset_sha256": "f261bae8d44c34356b7bb3e8129d065221bacde4ef733405c72c0c7b521f2fc3",
+      "record_sha256": "d1566d77daaea462c75c4a48c55d7682ba275eccca2abc306fff1bd2303b1c2b",
+      "model_sha256": "1d18cccf4687631229711c7677348705dc557aa4b5cce9bc0f6528b505be4770",
+      "scope": "Matched local three-layer demonstration window."
+    },
+    {
+      "file": "layered_terrain_flat.json",
+      "preset_sha256": "f261bae8d44c34356b7bb3e8129d065221bacde4ef733405c72c0c7b521f2fc3",
+      "record_sha256": "c8fccb978964cd60dfa2417275409de8497c6bdd897790fe3965478715d82f0a",
+      "model_sha256": "1d18cccf4687631229711c7677348705dc557aa4b5cce9bc0f6528b505be4770",
+      "scope": "Matched local three-layer demonstration window."
+    },
+    {
+      "file": "layered_terrain_hill.json",
+      "preset_sha256": "278aa3a8f677c4201676aa3e4d254856a9cc2f40c642d14000faaf9c021009ec",
+      "record_sha256": "4344e20cf07792bbf558c167f202fab0393cbdcff45722e754b687661f0ef5ec",
+      "model_sha256": "58bcdf7975af3edb07f7ef3a0df48a0cd6670db8ba4425d4d68d7b9cb48c70c3",
+      "scope": "Matched local three-layer demonstration window."
+    },
+    {
+      "file": "layered_terrain_hill.json",
+      "preset_sha256": "278aa3a8f677c4201676aa3e4d254856a9cc2f40c642d14000faaf9c021009ec",
+      "record_sha256": "7bd5d815ac2b5f335b716601d10bf5b54d2f3b9461df6ec03f865df2cb99648e",
+      "model_sha256": "58bcdf7975af3edb07f7ef3a0df48a0cd6670db8ba4425d4d68d7b9cb48c70c3",
+      "scope": "Matched local three-layer demonstration window."
+    },
+    {
+      "file": "layered_terrain_valley.json",
+      "preset_sha256": "9a1d67e2631edc1a2d0cb12f8ccd0049efbadbfe7a9cc708023de1eedf40c1d2",
+      "record_sha256": "739a7e3a902557ab829e4c89c8ceaad12d43e293586696be4e85060be76d6c20",
+      "model_sha256": "cae58f566f58eaad559fefe7ce3769d4fdad2bca86c5a61ba941309168494ad3",
+      "scope": "Matched local three-layer demonstration window."
+    },
+    {
+      "file": "layered_terrain_valley.json",
+      "preset_sha256": "9a1d67e2631edc1a2d0cb12f8ccd0049efbadbfe7a9cc708023de1eedf40c1d2",
+      "record_sha256": "ecb4996b4041da1d569c3f3324f64b7ceca2da39be1a9c32d668f1065fb76df2",
+      "model_sha256": "cae58f566f58eaad559fefe7ce3769d4fdad2bca86c5a61ba941309168494ad3",
+      "scope": "Matched local three-layer demonstration window."
+    }
+  ]
+}

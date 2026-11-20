@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+._*
+.venv/
+.env
+.env.*
+local_compute.json
+runtime.json

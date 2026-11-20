@@ -1,0 +1,21 @@
+{
+  "schema": "surface_wave_analysis_v1",
+  "options": {
+    "right": true,
+    "gated": true,
+    "vslow": 220,
+    "vfast": 400,
+    "pad": 0.1,
+    "min_offset": 30,
+    "max_offset": 410,
+    "fmin": 10,
+    "fmax": 30,
+    "cmin": 220,
+    "cmax": 700,
+    "dc": 1,
+    "spatial_weighting": "hann",
+    "method": "PS"
+  },
+  "origin_model_sha256": "241b53909578b0462498fa3b881a46110d56c0fc2efe55c40d2a290680893f34",
+  "note": "仅保存分析参数；模型匹配也不代表正演或频散已通过验收。 候选基阶观察窗，可能削弱高阶，不代表纯面波或新增精度验收。"
+}

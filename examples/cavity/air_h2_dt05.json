@@ -1,0 +1,47 @@
+{
+  "schema": "rect_region_v1",
+  "model": {
+    "schema": 1,
+    "physics": "elastic",
+    "material_model": "isotropic",
+    "width_m": 320,
+    "layers": [
+      [
+        160,
+        1000,
+        500,
+        1800
+      ]
+    ],
+    "surface": [],
+    "interface_relief": [],
+    "shot_x_m": 100,
+    "shot_depth_m": 0,
+    "source_mode": "surface_force",
+    "f0_hz": 25,
+    "source_t0_s": 0.12,
+    "first_x_m": 120,
+    "spacing_m": 2,
+    "receivers": 51,
+    "receiver_depth_m": 0,
+    "element_m": 2,
+    "dt_s": 5e-05,
+    "nstep": 12000,
+    "sample_stride": 8,
+    "snapshot_stride": 600,
+    "boundary": "stacey"
+  },
+  "rectangle_m": [
+    148,
+    172,
+    -40,
+    -24
+  ],
+  "interior": {
+    "kind": "fluid",
+    "name": "\u7a7a\u6c14\u5019\u9009",
+    "rho_kg_m3": 1.2,
+    "sound_speed_m_s": 343.0,
+    "reference": "\u7ea620\u00b0C\u5e38\u538b\uff1b\u7528\u6237\u5e94\u6309\u5b9e\u9645\u6761\u4ef6\u7f16\u8f91"
+  }
+}

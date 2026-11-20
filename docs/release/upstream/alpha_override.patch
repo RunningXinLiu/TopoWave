@@ -1,0 +1,45 @@
+--- a/src/specfem2D/pml_init.F90
++++ b/src/specfem2D/pml_init.F90
+@@ -549,6 +549,8 @@
+ 
+  subroutine define_PML_coefficients()
+ 
++  use, intrinsic :: ieee_arithmetic, only: ieee_is_finite
++
+   use constants, only: PI,NGLLX,NGLLZ,HUGEVAL,IMAIN, &
+     CPML_X_ONLY,CPML_Z_ONLY,CPML_XZ
+ 
+@@ -576,6 +578,10 @@
+ 
+ !ZN  we did not prove and we can not ensure that such an adjustment is optimum, since we do the adjustment based on
+ !ZN  our own experience in numerical simulation.
++
++  logical :: bgp_alpha_override
++  integer :: bgp_alpha_unit, bgp_alpha_status
++  double precision :: bgp_alpha_value
+ 
+   double precision :: f0_max, vx_source_max, vz_source_max, v_source_max
+ 
+@@ -830,6 +836,22 @@
+ 
+   ! reflection coefficient (Inria report section 6.1) http://hal.inria.fr/docs/00/07/32/19/PDF/RR-3471.pdf
+   ALPHA_MAX_PML = PI*f0_max ! from Festa and Vilotte
++  ! Optional research override in s^-1; source and upstream default are unchanged.
++  inquire(file='DATA/CPML_ALPHA_MAX', exist=bgp_alpha_override)
++  if (bgp_alpha_override) then
++    if (PML_PARAMETER_ADJUSTMENT .or. SOURCE_IS_MOVING) &
++      call stop_the_code('CPML_ALPHA_MAX override requires fixed source and no automatic PML adjustment')
++    open(newunit=bgp_alpha_unit, file='DATA/CPML_ALPHA_MAX', status='old', action='read', iostat=bgp_alpha_status)
++    if (bgp_alpha_status /= 0) call stop_the_code('Cannot open DATA/CPML_ALPHA_MAX')
++    read(bgp_alpha_unit,*,iostat=bgp_alpha_status) bgp_alpha_value
++    close(bgp_alpha_unit)
++    if (bgp_alpha_status /= 0) call stop_the_code('Invalid DATA/CPML_ALPHA_MAX')
++    if (.not. ieee_is_finite(bgp_alpha_value)) call stop_the_code('Nonfinite CPML alpha override')
++    if (bgp_alpha_value <= 0.d0) call stop_the_code('CPML alpha override must be positive')
++    ALPHA_MAX_PML = bgp_alpha_value
++    if (myrank == 0) write(IMAIN,*) 'BGP explicit CPML alpha_max (s^-1): ', ALPHA_MAX_PML
++  endif
++
+   ! By experience, the d parameter defition according to Festa and Vilotte is small, thus we use damping_change_factor_acoustic
+   ! to increase the d parameter for PML implementation for acoustic simulation.
+ 

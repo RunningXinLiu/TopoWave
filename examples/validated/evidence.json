@@ -1,0 +1,27 @@
+{
+  "flat20.json": {
+    "sha256": "c1f653054f806a4ea55aba307d92247810e83c9c48b2c031a50bdc1cfebabc86",
+    "report": "experiments/surface_force/LAYERED_FREQUENCY_RESULTS_20261105.md",
+    "scope": "仅匹配此平地物理与数值配置；快照输出开关不属于波形精度声明。"
+  },
+  "flat80.json": {
+    "sha256": "34ee96985ba0c558291b4f2b8d3dd2ae2e5b1eb0fd0ddb49d8baf087940664db",
+    "report": "experiments/thick_layer/RESULTS_20261105.md",
+    "scope": "仅匹配此平地物理与数值配置；快照输出开关不属于波形精度声明。"
+  },
+  "homogeneous.json": {
+    "sha256": "0cf53a88c83741b64ca31efeb03f5a769031594fbe021af383ffab5693e92faf",
+    "report": "experiments/surface_force/HOMOGENEOUS_WAVEFORM_20261105.md",
+    "scope": "仅匹配此平地物理与数值配置；快照输出开关不属于波形精度声明。"
+  },
+  "matched/flat18.json": {
+    "sha256": "9c4185ef5aa9deaf9297c05755f85883084af607765430cced8f5efcfd9159cf",
+    "report": "experiments/matched_flat/RESULTS_zh.md",
+    "scope": "仅固定12–30Hz面波窗网格及地形增量筛查；晚段未全面通过。快照输出另作流程验证。"
+  },
+  "matched/hill18.json": {
+    "sha256": "411398b91f00932e6868e1ed52c3dab352030ef82bd17ddd2c4aea3550d3c2de",
+    "report": "experiments/matched_flat/RESULTS_zh.md",
+    "scope": "仅固定12–30Hz面波窗网格及地形增量筛查；晚段未全面通过。快照输出另作流程验证。"
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "flat_solid": {
+    "bundle_sha256": "49259c298ac1c6526dc8a6c8a9d61191de5dc43161d94c62edc895fa6f650b37",
+    "case_sha256": "305d11660607640269b9f38dc7e1e8b1c17b82c9fc6f554bab8e88bfa22f10e3",
+    "waveform_shape": [
+      1960,
+      93
+    ],
+    "frame_count": 21,
+    "mesh_material_counts": {
+      "1": 1760,
+      "2": 1600,
+      "3": 4000
+    },
+    "scaled_jacobian_min": 1.0,
+    "coupling_edges": 0,
+    "pressure_peak_Pa": null,
+    "mode_frequency_counts": {
+      "0": 28,
+      "1": 28,
+      "2": 28
+    },
+    "window_covers_all_times": true
+  },
+  "flat_water": {
+    "bundle_sha256": "f4c9a525b73046614c30c10c6222ae986214379aaafd392222c1cdc7b3780bea",
+    "case_sha256": "33a09e141f0ccaadcd15e779133770fdbb65077679204b8ca4e2332b03e4883d",
+    "waveform_shape": [
+      1960,
+      93
+    ],
+    "frame_count": 21,
+    "mesh_material_counts": {
+      "1": 1688,
+      "2": 1600,
+      "3": 4000,
+      "4": 72
+    },
+    "scaled_jacobian_min": 1.0,
+    "coupling_edges": 36,
+    "pressure_peak_Pa": 0.005962330370341919,
+    "mode_frequency_counts": {
+      "0": 28,
+      "1": 28,
+      "2": 28
+    },
+    "window_covers_all_times": true,
+    "relative_full_vz_l2": 0.8765671911796019
+  },
+  "hill_solid": {
+    "bundle_sha256": "0040cf78c4248ff71c011ea06fb0b2604bc56d99742ab829a7719495431314b7",
+    "case_sha256": "618e8ca87fb3f735454428cede9d73f2aa61c266e964fab9b16772e461a1b847",
+    "waveform_shape": [
+      1960,
+      93
+    ],
+    "frame_count": 21,
+    "mesh_material_counts": {
+      "1": 1760,
+      "2": 1600,
+      "3": 4000
+    },
+    "scaled_jacobian_min": 0.9196859112807408,
+    "coupling_edges": 0,
+    "pressure_peak_Pa": null,
+    "mode_frequency_counts": {
+      "0": 28,
+      "1": 28,
+      "2": 28
+    },
+    "window_covers_all_times": true
+  },
+  "hill_water": {
+    "bundle_sha256": "74ce4b41b08cffce55345ef24a010f710e198bfa260c7665550548a1425ec0a1",
+    "case_sha256": "1576a00f34888339851e8d36c0a0c0d5b032bbc9f118685c0f589c976de8742f",
+    "waveform_shape": [
+      1960,
+      93
+    ],
+    "frame_count": 21,
+    "mesh_material_counts": {
+      "1": 1688,
+      "2": 1600,
+      "3": 4000,
+      "4": 72
+    },
+    "scaled_jacobian_min": 0.9196859112807408,
+    "coupling_edges": 36,
+    "pressure_peak_Pa": 0.003204404127539271,
+    "mode_frequency_counts": {
+      "0": 28,
+      "1": 28,
+      "2": 28
+    },
+    "window_covers_all_times": true,
+    "relative_full_vz_l2": 0.8340221053099565
+  },
+  "valley_solid": {
+    "bundle_sha256": "f5dbdd6f2498ca57b4dd2c1c58b28cb0d48c3cdd4231b8c803de3a12506dd06e",
+    "case_sha256": "c2f0f6d6e1393093a9376b54446f850f5b6c97c7dd29e30c517afc60f8cb2aa5",
+    "waveform_shape": [
+      1960,
+      93
+    ],
+    "frame_count": 21,
+    "mesh_material_counts": {
+      "1": 1760,
+      "2": 1600,
+      "3": 4000
+    },
+    "scaled_jacobian_min": 0.9196859112807407,
+    "coupling_edges": 0,
+    "pressure_peak_Pa": null,
+    "mode_frequency_counts": {
+      "0": 28,
+      "1": 28,
+      "2": 28
+    },
+    "window_covers_all_times": true
+  },
+  "valley_water": {
+    "bundle_sha256": "16cecb393a7cd0e83cdaacc9e895294302cfc4e823cf11fc9cf811ba510616d4",
+    "case_sha256": "3a4a71a306cda9e211e9e9856b59b648769808df429ca934807301332f8a14b6",
+    "waveform_shape": [
+      1960,
+      93
+    ],
+    "frame_count": 21,
+    "mesh_material_counts": {
+      "1": 1688,
+      "2": 1600,
+      "3": 4000,
+      "4": 72
+    },
+    "scaled_jacobian_min": 0.9196859112807407,
+    "coupling_edges": 36,
+    "pressure_peak_Pa": 0.004452349138267294,
+    "mode_frequency_counts": {
+      "0": 28,
+      "1": 28,
+      "2": 28
+    },
+    "window_covers_all_times": true,
+    "relative_full_vz_l2": 0.868236213522929
+  },
+  "code_sha256": {
+    "region_geometry.py": "63b488347d0483b6f3ef271954c99d2d12b0a760f14fce2f52d41d69f9c90bd9",
+    "region_geometry_result.py": "d54a54cb8b78d5a98c8da10891ff1e24b1f079426949316402e55790d81afc1b",
+    "region_case.py": "badf24caf945732e58b2093c1ecc63dcaee2e70f80a2f4fbfe5d7f379a778f33",
+    "imaging.py": "9b7c5690899b73ccf774de2a410f9045ef5b148355a20dd25034a7ac0988b8df",
+    "fh_imaging.py": "373b3cd53ceb9633200c050816cc8af3e75a1c4192f72cd7a8738191e7981883",
+    "theory_reference.py": "58deb86afbf20736699539deaad3cc6970341b9b69620d3bad63dcd2d94c5b57"
+  }
+}

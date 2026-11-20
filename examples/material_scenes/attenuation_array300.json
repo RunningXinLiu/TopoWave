@@ -1,0 +1,83 @@
+{
+  "schema": "active_shot_template_v1",
+  "model": {
+    "schema": 1,
+    "physics": "elastic",
+    "width_m": 580.0,
+    "layers": [
+      [
+        24.0,
+        1000.0,
+        500.0,
+        1800.0
+      ],
+      [
+        96.0,
+        1400.0,
+        800.0,
+        2000.0
+      ]
+    ],
+    "surface": [],
+    "interface_relief": [],
+    "shot_x_m": 100.0,
+    "shot_depth_m": 0.0,
+    "source_mode": "surface_force",
+    "f0_hz": 25.0,
+    "source_t0_s": 0.12,
+    "first_x_m": 120.0,
+    "spacing_m": 2.0,
+    "receivers": 151,
+    "receiver_depth_m": 0.0,
+    "element_m": 4.0,
+    "elements_per_layer": [
+      6,
+      24
+    ],
+    "dt_s": 0.0001,
+    "nstep": 16000,
+    "sample_stride": 4,
+    "snapshot_stride": 800,
+    "boundary": "cpml",
+    "pml_elements": 10,
+    "cpml_alpha_factor": 2.0,
+    "damping_change_factor_elastic": 1.0,
+    "material_model": "isotropic",
+    "attenuation": {
+      "enabled": true,
+      "n_sls": 3,
+      "velocity_reference": "source_f0"
+    },
+    "material_properties": [
+      {
+        "qkappa": 100.0,
+        "qmu": 50.0
+      },
+      {
+        "qkappa": 100.0,
+        "qmu": 50.0
+      }
+    ]
+  },
+  "analysis": {
+    "schema": "surface_wave_analysis_v1",
+    "options": {
+      "right": true,
+      "gated": true,
+      "vslow": 300.0,
+      "vfast": 1100.0,
+      "pad": 0.06,
+      "fmin": 12.5,
+      "fmax": 50.0,
+      "cmin": 300.0,
+      "cmax": 1100.0,
+      "dc": 1.0,
+      "spatial_weighting": "equal",
+      "min_offset": 0,
+      "max_offset": 0,
+      "method": "PS"
+    },
+    "origin_model_sha256": "3b0c6b92a408d8cfd4dbdf1d84817500b24d00cefcf153be9e8d6928ca131614",
+    "note": "仅保存分析参数；模型匹配也不代表正演或频散已通过验收。"
+  }
+}

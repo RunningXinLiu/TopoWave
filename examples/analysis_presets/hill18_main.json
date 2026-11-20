@@ -1,0 +1,20 @@
+{
+  "schema": "surface_wave_analysis_v1",
+  "options": {
+    "right": true,
+    "gated": true,
+    "min_offset": 30,
+    "max_offset": 130,
+    "vslow": 240,
+    "vfast": 340,
+    "pad": 0.08,
+    "fmin": 12,
+    "fmax": 30,
+    "cmin": 180,
+    "cmax": 600,
+    "dc": 1,
+    "spatial_weighting": "equal"
+  },
+  "origin_model_sha256": null,
+  "note": "18Hz均匀Vs300m/s、5m山丘示例的主要面波参数。证据：window_dispersion、boundary_window、acquisition_design。换模型/源/排列需重验；不保证窗内为纯面波。"
+}

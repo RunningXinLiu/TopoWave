@@ -1,0 +1,116 @@
+{
+  "schema": 1,
+  "physics": "elastic",
+  "width_m": 320.0,
+  "layers": [
+    [
+      24.0,
+      1000.0,
+      500.0,
+      1800.0
+    ],
+    [
+      96.0,
+      1400.0,
+      800.0,
+      2000.0
+    ]
+  ],
+  "surface": [
+    [
+      0,
+      0
+    ],
+    [
+      40,
+      0
+    ],
+    [
+      80,
+      0
+    ],
+    [
+      120,
+      2
+    ],
+    [
+      160,
+      4
+    ],
+    [
+      200,
+      2
+    ],
+    [
+      240,
+      0
+    ],
+    [
+      280,
+      0
+    ],
+    [
+      320,
+      0
+    ]
+  ],
+  "interface_relief": [
+    [
+      0,
+      0,
+      0,
+      -2,
+      -4,
+      -2,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      -2,
+      -4,
+      -2,
+      0,
+      0,
+      0
+    ]
+  ],
+  "shot_x_m": 100.0,
+  "shot_depth_m": 0.0,
+  "source_mode": "surface_force",
+  "f0_hz": 25.0,
+  "source_t0_s": 0.12,
+  "first_x_m": 120.0,
+  "spacing_m": 2.0,
+  "receivers": 51,
+  "receiver_depth_m": 0.0,
+  "element_m": 4.0,
+  "elements_per_layer": [
+    6,
+    24
+  ],
+  "dt_s": 0.0001,
+  "nstep": 8000,
+  "sample_stride": 4,
+  "snapshot_stride": 400,
+  "boundary": "stacey",
+  "pml_elements": 10,
+  "cpml_alpha_factor": 1.0,
+  "damping_change_factor_elastic": 1.0,
+  "material_model": "hti",
+  "material_properties": [
+    {
+      "epsilon": 0.12,
+      "delta": 0.04,
+      "gamma": 0.08
+    },
+    {
+      "epsilon": 0.12,
+      "delta": 0.04,
+      "gamma": 0.08
+    }
+  ]
+}

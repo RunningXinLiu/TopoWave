@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "entries": [
+    {
+      "file": "flat12_air16.json",
+      "template_sha256": "dae398b5b1ebf27fbb089309134add558e601242bd0bcaa6702ca7772b2b6b11",
+      "scientific_status": "completed_scoped_research_not_full_acceptance",
+      "label": "实际固—空气—固；完整4s积分、301道等权，双场及网格可查看。固定窗频散和指数加权SASEM对照已有证据，完整晚段与无限域近似未全面验收。",
+      "backend_config_key": "layered_fluid_backend",
+      "backend_sha256": {
+        "xspecfem2D": "2e8a0f1b89e2b5a2af94615141cbdf210b426dd2830f587e62988b1e30d52307",
+        "xmeshfem2D": "b6948849ed8c014cd41ecba0474985e2607729297a33880bbef811b69afd1ff5"
+      },
+      "source_report": "docs/release/CLOSEOUT_20261116_zh.md",
+      "source_report_sha256": "a483133ed3fac6251dd2b861db4309824d307718ffdcbb1e1d7f91f091dbb818",
+      "checks": [
+        {
+          "name": "实际介质与结果",
+          "state": "completed",
+          "summary": "真实空气声学层；上下声弹耦合，完整波场/单炮及实际网格均已保存。",
+          "report": "docs/release/CLOSEOUT_20261116_zh.md"
+        },
+        {
+          "name": "独立参考与边界",
+          "state": "partial",
+          "summary": "固定窗与共同指数加权对照已有证据；完整晚段、任意参数和模态完备性未验收。",
+          "report": "docs/release/CLOSEOUT_20261116_zh.md"
+        }
+      ]
+    }
+  ]
+}

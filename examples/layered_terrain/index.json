@@ -1,0 +1,56 @@
+{
+  "entries": [
+    {
+      "key": "flat_solid",
+      "label": "三层平地 · 无洞",
+      "case_sha256": "305d11660607640269b9f38dc7e1e8b1c17b82c9fc6f554bab8e88bfa22f10e3",
+      "result_sha256": "49259c298ac1c6526dc8a6c8a9d61191de5dc43161d94c62edc895fa6f650b37"
+    },
+    {
+      "key": "flat_water",
+      "label": "三层平地 · 36 × 18 m 水洞",
+      "case_sha256": "33a09e141f0ccaadcd15e779133770fdbb65077679204b8ca4e2332b03e4883d",
+      "result_sha256": "f4c9a525b73046614c30c10c6222ae986214379aaafd392222c1cdc7b3780bea"
+    },
+    {
+      "key": "hill_solid",
+      "label": "三层山丘 +18 m · 无洞",
+      "case_sha256": "618e8ca87fb3f735454428cede9d73f2aa61c266e964fab9b16772e461a1b847",
+      "result_sha256": "0040cf78c4248ff71c011ea06fb0b2604bc56d99742ab829a7719495431314b7"
+    },
+    {
+      "key": "hill_water",
+      "label": "三层山丘 +18 m · 36 × 18 m 水洞",
+      "case_sha256": "1576a00f34888339851e8d36c0a0c0d5b032bbc9f118685c0f589c976de8742f",
+      "result_sha256": "74ce4b41b08cffce55345ef24a010f710e198bfa260c7665550548a1425ec0a1"
+    },
+    {
+      "key": "valley_solid",
+      "label": "三层谷地 −18 m · 无洞",
+      "case_sha256": "c2f0f6d6e1393093a9376b54446f850f5b6c97c7dd29e30c517afc60f8cb2aa5",
+      "result_sha256": "f5dbdd6f2498ca57b4dd2c1c58b28cb0d48c3cdd4231b8c803de3a12506dd06e"
+    },
+    {
+      "key": "valley_water",
+      "label": "三层谷地 −18 m · 36 × 18 m 水洞",
+      "case_sha256": "3a4a71a306cda9e211e9e9856b59b648769808df429ca934807301332f8a14b6",
+      "result_sha256": "16cecb393a7cd0e83cdaacc9e895294302cfc4e823cf11fc9cf811ba510616d4"
+    }
+  ],
+  "options": {
+    "right": true,
+    "gated": true,
+    "vslow": 245,
+    "vfast": 760,
+    "pad": 0.055,
+    "min_offset": 0,
+    "max_offset": 0,
+    "fmin": 8,
+    "fmax": 28,
+    "cmin": 210,
+    "cmax": 780,
+    "dc": 3,
+    "spatial_weighting": "equal",
+    "method": "FH"
+  }
+}

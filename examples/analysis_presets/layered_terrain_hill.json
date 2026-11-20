@@ -1,0 +1,21 @@
+{
+  "schema": "surface_wave_analysis_v1",
+  "options": {
+    "right": true,
+    "gated": true,
+    "vslow": 245,
+    "vfast": 760,
+    "pad": 0.055,
+    "min_offset": 0,
+    "max_offset": 0,
+    "fmin": 8,
+    "fmax": 28,
+    "cmin": 210,
+    "cmax": 780,
+    "dc": 3,
+    "spatial_weighting": "equal",
+    "method": "FH"
+  },
+  "origin_model_sha256": "58bcdf7975af3edb07f7ef3a0df48a0cd6670db8ba4425d4d68d7b9cb48c70c3",
+  "note": "仅保存分析参数；模型匹配也不代表正演或频散已通过验收。"
+}

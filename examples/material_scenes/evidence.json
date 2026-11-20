@@ -1,0 +1,511 @@
+{
+  "schema": 1,
+  "entries": [
+    {
+      "file": "attenuation_flat.json",
+      "template_sha256": "7f0c7b8ba1c825be7eabd27af7d6696116c17192b175d9e1e07e64d7c8487b36",
+      "label": "材料接口试验：0.8s/全域21帧已检查；平地4→2m最大差0.109%，原dt控制已通过；独立参考/长时边界未验收。",
+      "scientific_status": "partial_not_production",
+      "server_case": "attenuation_flat",
+      "control_case": "attenuation_mesh_half",
+      "control_report": "experiments/material_convergence_20261110/RESULTS_zh.md",
+      "checks": [
+        {
+          "name": "空间离散",
+          "state": "passed",
+          "summary": "指定检查通过：最大差0.109%，门槛1%；4→2m",
+          "report": "experiments/material_convergence_20261110/RESULTS_zh.md"
+        },
+        {
+          "name": "独立参考 · 完整单炮",
+          "state": "not_checked",
+          "summary": "未检查；不能继承其他材料或平地结果。",
+          "report": "experiments/material_convergence_20261110/RESULTS_zh.md"
+        },
+        {
+          "name": "长时边界",
+          "state": "not_checked",
+          "summary": "未验收；目前记录跨度约0.8s。",
+          "report": "experiments/material_convergence_20261110/RESULTS_zh.md"
+        }
+      ]
+    },
+    {
+      "file": "attenuation_hill.json",
+      "template_sha256": "8f96d72ba528db51c9c4276ea80e649bfa2c6ba781bc546376d97dc3e6885c5b",
+      "label": "材料接口试验：0.8s/全域21帧已检查；山丘dt减半最大差0.054%；山丘空间未验；独立参考/长时边界未验收。",
+      "scientific_status": "partial_not_production",
+      "server_case": "attenuation_hill",
+      "control_case": "attenuation_hill_dt_half",
+      "control_report": "experiments/material_convergence_20261110/RESULTS_zh.md",
+      "checks": [
+        {
+          "name": "时间离散",
+          "state": "passed",
+          "summary": "指定检查通过：最大差0.054%，门槛1%；山丘dt减半",
+          "report": "experiments/material_convergence_20261110/RESULTS_zh.md"
+        },
+        {
+          "name": "独立参考 · 完整单炮",
+          "state": "not_checked",
+          "summary": "未检查；不能继承其他材料或平地结果。",
+          "report": "experiments/material_convergence_20261110/RESULTS_zh.md"
+        },
+        {
+          "name": "长时边界",
+          "state": "not_checked",
+          "summary": "未验收；目前记录跨度约0.8s。",
+          "report": "experiments/material_convergence_20261110/RESULTS_zh.md"
+        }
+      ]
+    },
+    {
+      "file": "hti_flat.json",
+      "template_sha256": "a2e65499baec0e5453c0d1fe0909c314b07e6697bdceb9825e8f9edca8510c78",
+      "label": "材料接口试验：空间/dt控制通过；独立参考全记录未通过（Vz 7.64%、Vx 8.79%）；晚段返回污染，不能当半空间可靠模板。仅Stacey。",
+      "scientific_status": "failed_full_record_reference",
+      "server_case": "hti_flat",
+      "control_case": "hti_mesh_half",
+      "control_report": "experiments/material_convergence_20261110/RESULTS_zh.md",
+      "independent_report": "experiments/ti_reference_20261110/RESULTS_zh.md",
+      "checks": [
+        {
+          "name": "空间离散",
+          "state": "passed",
+          "summary": "指定检查通过：最大差0.154%，门槛1%；4→2m",
+          "report": "experiments/material_convergence_20261110/RESULTS_zh.md"
+        },
+        {
+          "name": "独立参考 · 完整单炮",
+          "state": "failed",
+          "summary": "未通过：Vz 7.64% / Vx 8.79%，门槛1%；晚段返回污染",
+          "report": "experiments/ti_reference_20261110/RESULTS_zh.md",
+          "relative_l2": {
+            "vz": 0.07639611811338731,
+            "vx": 0.0878811315157927
+          },
+          "threshold": 0.01
+        },
+        {
+          "name": "长时边界",
+          "state": "not_checked",
+          "summary": "未验收；目前记录跨度约0.8s。",
+          "report": "experiments/material_convergence_20261110/RESULTS_zh.md"
+        }
+      ]
+    },
+    {
+      "file": "hti_hill.json",
+      "template_sha256": "fe3631990ca6962eac3e402ece12f3baf67e8e88f89c9674973fb143693ad8b2",
+      "label": "材料接口试验：0.8s/全域21帧已检查；山丘dt减半最大差0.065%；山丘空间未验；独立参考/长时边界未验收。仅Stacey；",
+      "scientific_status": "partial_not_production",
+      "server_case": "hti_hill",
+      "control_case": "hti_hill_dt_half",
+      "control_report": "experiments/material_convergence_20261110/RESULTS_zh.md",
+      "checks": [
+        {
+          "name": "时间离散",
+          "state": "passed",
+          "summary": "指定检查通过：最大差0.065%，门槛1%；山丘dt减半",
+          "report": "experiments/material_convergence_20261110/RESULTS_zh.md"
+        },
+        {
+          "name": "独立参考 · 完整单炮",
+          "state": "not_checked",
+          "summary": "未检查；不能继承其他材料或平地结果。",
+          "report": "experiments/material_convergence_20261110/RESULTS_zh.md"
+        },
+        {
+          "name": "长时边界",
+          "state": "not_checked",
+          "summary": "未验收；目前记录跨度约0.8s。",
+          "report": "experiments/material_convergence_20261110/RESULTS_zh.md"
+        }
+      ]
+    },
+    {
+      "file": "isotropic_flat.json",
+      "template_sha256": "21769a5914e7a01ff1bfa7596ed9b30d696f6dfe3397f9506bf5155694efb71a",
+      "label": "材料接口试验：本两层平地0.8s完整波形独立参考通过（Vz 0.215%、Vx 0.221%）；固定窗PS/FH通过。空间/dt控制、山丘及长时稳定未验收。",
+      "scientific_status": "partial_not_production",
+      "server_case": "isotropic_flat",
+      "independent_report": "experiments/iso_reference_20261110/RESULTS_zh.md",
+      "checks": [
+        {
+          "name": "独立参考 · 完整单炮",
+          "state": "passed",
+          "summary": "材料接口试验：本两层平地0.8s完整波形独立参考通过（Vz 0.215%、Vx 0.221%）",
+          "report": "experiments/iso_reference_20261110/RESULTS_zh.md",
+          "relative_l2": {
+            "vz": 0.0021463133698890156,
+            "vx": 0.002213500664970535
+          },
+          "threshold": 0.01
+        },
+        {
+          "name": "PS · 固定面波窗功率",
+          "state": "passed",
+          "summary": "整体差0.0353%，最坏逐频0.0694%；等权，15–35Hz（17个FFT频点），仅本输入及窗口。",
+          "report": "experiments/iso_reference_20261110/RESULTS_zh.md",
+          "metrics": {
+            "relative_l2": 0.00035307477604617734,
+            "max_frequency_relative_l2": 0.0006936932324358464,
+            "frequency_relative_l2": [
+              4.566785296847563e-05,
+              4.532917895514272e-05,
+              4.8232288615938686e-05,
+              6.176591481307206e-05,
+              7.597906459141143e-05,
+              9.197134156466958e-05,
+              0.00011201989704078041,
+              0.000136728395993234,
+              0.00015984492342061728,
+              0.00018659201491362005,
+              0.00022901771429974574,
+              0.0002904275027835764,
+              0.00036293245117409765,
+              0.0004408474296252267,
+              0.0005221549033719021,
+              0.0006049199565704576,
+              0.0006936932324358464
+            ],
+            "threshold_total": 0.01,
+            "threshold_frequency": 0.03,
+            "state": "passed_this_comparison"
+          },
+          "observation_version": {
+            "operator_version": "coherent_spatial_v3",
+            "frequency_selection": "inclusive_fft_bounds_rtol1e-12_v1"
+          }
+        },
+        {
+          "name": "FH · 固定面波窗功率",
+          "state": "passed",
+          "summary": "整体差0.0477%，最坏逐频0.0665%；等权，15–35Hz（17个FFT频点），仅本输入及窗口。",
+          "report": "experiments/iso_reference_20261110/RESULTS_zh.md",
+          "metrics": {
+            "relative_l2": 0.0004768176770683977,
+            "max_frequency_relative_l2": 0.000665341196431241,
+            "frequency_relative_l2": [
+              5.759512853095191e-05,
+              5.624685723935369e-05,
+              6.705512835962466e-05,
+              8.195754682713219e-05,
+              8.820818405990208e-05,
+              9.058709716607884e-05,
+              9.9205514563794e-05,
+              0.0001191381596990797,
+              0.00014200534499236365,
+              0.00016846064609003826,
+              0.00020919554917031414,
+              0.00026842122263366804,
+              0.00033868430486089685,
+              0.00041513431721356406,
+              0.0004964755992012444,
+              0.0005787543803092568,
+              0.000665341196431241
+            ],
+            "threshold_total": 0.01,
+            "threshold_frequency": 0.03,
+            "state": "passed_this_comparison"
+          },
+          "observation_version": {
+            "operator_version": "fh_hankel1_rdr_omegak_v2",
+            "frequency_selection": "inclusive_fft_bounds_rtol1e-12_v1"
+          }
+        },
+        {
+          "name": "空间/时间离散控制",
+          "state": "not_checked",
+          "summary": "本模板尚无独立网格/dt控制，未从其他材料继承。",
+          "report": "experiments/iso_reference_20261110/RESULTS_zh.md"
+        },
+        {
+          "name": "长时稳定 / 山丘",
+          "state": "not_checked",
+          "summary": "仅本平地0.8s记录通过；更长记录与山丘配置未在此验收。",
+          "report": "experiments/iso_reference_20261110/RESULTS_zh.md"
+        }
+      ]
+    },
+    {
+      "file": "isotropic_hill.json",
+      "template_sha256": "56433ffe7f9c26b8e4dfb559cb9e6616f27c0b7aaff81c77e3a62942289d179b",
+      "label": "材料接口试验：0.8s记录/全域21帧已检查，此模板无dt控制；空间/独立参考/边界未验收。",
+      "scientific_status": "partial_not_production",
+      "server_case": "isotropic_hill"
+    },
+    {
+      "file": "vti_flat.json",
+      "template_sha256": "b9411bbf1d6e10ecfc34190274cc80303d2041d13407ba7c6d153a5142f86578",
+      "label": "材料接口试验：空间/dt控制通过；独立参考全记录未通过（Vz 9.73%、Vx 10.52%）；晚段返回污染，不能当半空间可靠模板。仅Stacey。VTI严格退化检查未通过。",
+      "scientific_status": "failed_full_record_reference",
+      "server_case": "vti_flat",
+      "control_case": "vti_mesh_half",
+      "control_report": "experiments/material_convergence_20261110/RESULTS_zh.md",
+      "independent_report": "experiments/ti_reference_20261110/RESULTS_zh.md",
+      "checks": [
+        {
+          "name": "空间离散",
+          "state": "passed",
+          "summary": "指定检查通过：最大差0.207%，门槛1%；4→2m",
+          "report": "experiments/material_convergence_20261110/RESULTS_zh.md"
+        },
+        {
+          "name": "独立参考 · 完整单炮",
+          "state": "failed",
+          "summary": "未通过：Vz 9.73% / Vx 10.52%，门槛1%；晚段返回污染",
+          "report": "experiments/ti_reference_20261110/RESULTS_zh.md",
+          "relative_l2": {
+            "vz": 0.09727621223705588,
+            "vx": 0.10522519755743787
+          },
+          "threshold": 0.01
+        },
+        {
+          "name": "VTI零各向异性退化",
+          "state": "failed",
+          "summary": "未达严格门槛：最大差0.007321%，门槛0.001%。",
+          "report": "experiments/material_scenes_20261110/RESULTS_zh.md"
+        },
+        {
+          "name": "长时边界",
+          "state": "not_checked",
+          "summary": "未验收；目前记录跨度约0.8s。",
+          "report": "experiments/material_convergence_20261110/RESULTS_zh.md"
+        }
+      ]
+    },
+    {
+      "file": "vti_hill.json",
+      "template_sha256": "bb759efd54aa68e290f452c0038a978845326550736100c82bf72b7f1a7924fa",
+      "label": "材料接口试验：0.8s/全域21帧已检查；山丘dt减半最大差0.069%；山丘空间未验；独立参考/长时边界未验收。仅Stacey；VTI零各向异性严格退化检查未通过。",
+      "scientific_status": "partial_not_production",
+      "server_case": "vti_hill",
+      "control_case": "vti_hill_dt_half",
+      "control_report": "experiments/material_convergence_20261110/RESULTS_zh.md",
+      "checks": [
+        {
+          "name": "时间离散",
+          "state": "passed",
+          "summary": "指定检查通过：最大差0.069%，门槛1%；山丘dt减半",
+          "report": "experiments/material_convergence_20261110/RESULTS_zh.md"
+        },
+        {
+          "name": "独立参考 · 完整单炮",
+          "state": "not_checked",
+          "summary": "未检查；不能继承其他材料或平地结果。",
+          "report": "experiments/material_convergence_20261110/RESULTS_zh.md"
+        },
+        {
+          "name": "VTI零各向异性退化",
+          "state": "failed",
+          "summary": "未达严格门槛：最大差0.007321%，门槛0.001%。",
+          "report": "experiments/material_scenes_20261110/RESULTS_zh.md"
+        },
+        {
+          "name": "长时边界",
+          "state": "not_checked",
+          "summary": "未验收；目前记录跨度约0.8s。",
+          "report": "experiments/material_convergence_20261110/RESULTS_zh.md"
+        }
+      ]
+    },
+    {
+      "file": "iso_array300.json",
+      "template_sha256": "9dcee0a1bffee3dfb87e54bb84751cedc19f2fe5949c72eb47a9bc222b1c820a",
+      "label": "两层ISO平地300m阵列：3.2s完整Vz/Vx误差0.539%/0.557%，PS/FH功率0.102%/0.188%，通过本次独立参考门槛；弱尾波残差保留，山丘及其他材料不继承。",
+      "scientific_status": "passed_scoped_reference_not_universal",
+      "server_case": "iso_array_design_20261110/sem",
+      "independent_report": "experiments/iso_array_design_20261110/RESULTS_zh.md",
+      "checks": [
+        {
+          "name": "独立参考 · 完整单炮",
+          "state": "passed",
+          "summary": "完整3.2s Vz0.539%、Vx0.557%，逐道最大0.876%/0.870%；门槛1%。",
+          "report": "experiments/iso_array_design_20261110/RESULTS_zh.md"
+        },
+        {
+          "name": "面波窗PS/FH",
+          "state": "passed",
+          "summary": "8.125–50Hz全部135频点；整图0.102%/0.188%，最坏频点0.531%/0.508%；门槛1%/3%。",
+          "report": "experiments/iso_array_design_20261110/RESULTS_zh.md"
+        },
+        {
+          "name": "实际网格及全域监测",
+          "state": "passed",
+          "summary": "4350个Q9谱元，最小scaled Jacobian=1；41帧有限，3.2s未触发持续增长；弱残差不为零。",
+          "report": "experiments/iso_array_design_20261110/RESULTS_zh.md"
+        },
+        {
+          "name": "时间步及范围限制",
+          "state": "not_checked",
+          "summary": "平地未单独执行dt控制；山丘结果见独立山丘模板，其他材料和更长记录不继承。",
+          "report": "experiments/iso_array_design_20261110/RESULTS_zh.md"
+        },
+        {
+          "name": "匹配平地空间控制（追加）",
+          "state": "passed",
+          "summary": "4→2m完整Vz/Vx差0.330%/0.350%；新细网格独立参考检查通过。",
+          "report": "experiments/iso_terrain_20261110/RESULTS_zh.md"
+        }
+      ]
+    },
+    {
+      "file": "iso_hill_array300.json",
+      "template_sha256": "7a50fb70ebc79bf79222864ebe0c6deccdb73d59137f82d37dd22a74a378a408",
+      "label": "固定层界4m山丘：3.2s网格/dt/边界控制通过；全阵列地形波形增量粗细差Vz0.322%/Vx0.478%。山丘前极弱差分未分辨；局部1D曲线不是二维地形真值。",
+      "scientific_status": "aggregate_controls_passed_weak_near_increment_unresolved",
+      "server_case": "iso_terrain_20261110/runs/hill_base",
+      "control_report": "experiments/iso_terrain_20261110/RESULTS_zh.md",
+      "checks": [
+        {
+          "name": "山丘空间离散",
+          "state": "passed",
+          "summary": "完整Vz/Vx 0.367%/0.387%；PS/FH整图最大0.122%、最坏频率0.353%。",
+          "report": "experiments/iso_terrain_20261110/RESULTS_zh.md"
+        },
+        {
+          "name": "山丘时间步",
+          "state": "passed",
+          "summary": "完整Vz/Vx 0.202%/0.201%；PS/FH整图最大0.093%、最坏频率0.202%。",
+          "report": "experiments/iso_terrain_20261110/RESULTS_zh.md"
+        },
+        {
+          "name": "边界距离敏感度",
+          "state": "passed",
+          "summary": "完整Vz/Vx 0.114%/0.120%；PS/FH整图最大0.016%、最坏频率0.097%。",
+          "report": "experiments/iso_terrain_20261110/RESULTS_zh.md"
+        },
+        {
+          "name": "匹配山丘减平地增量",
+          "state": "passed",
+          "summary": "粗细网格Vz/Vx增量差0.322%/0.478%，门槛5%；线性功率增量整体/逐频检查通过。",
+          "report": "experiments/iso_terrain_20261110/RESULTS_zh.md"
+        },
+        {
+          "name": "独立真值与范围",
+          "state": "not_checked",
+          "summary": "平地有独立半空间参考；本山丘无独立二维真值。未验证更陡地形、其他材料和更长记录；固定层界使山顶覆盖层增厚。",
+          "report": "experiments/iso_terrain_20261110/RESULTS_zh.md"
+        },
+        {
+          "name": "山丘前极弱散射差分",
+          "state": "failed",
+          "summary": "x180–248m增量仅原波形约0.03%–0.09%，粗细网格差约0.05%–0.09%；相对误差超过100%，此弱分量未分辨。",
+          "report": "experiments/iso_terrain_20261110/RESULTS_zh.md"
+        }
+      ]
+    },
+    {
+      "file": "attenuation_array300.json",
+      "template_sha256": "a6800d21a5be682d232c88fe9d333b05346d1701bc4a42fe093b5e2631e5f57a",
+      "scientific_status": "numerical_controls_passed_reference_pending",
+      "label": "Q平地300 m/2 m，完整1.6 s；空间/时间步控制通过，独立SLS参考和长时边界未验收。后端实际为单精度；不以有限值代替精度验收。",
+      "backend_sha256": {
+        "xspecfem2D": "44037ae887cbc9c50b09b38e4bf0fc0e841a891704a0c9a0f012600baaba009d",
+        "xmeshfem2D": "4deff9a4f126e6b7b169b49990130802bb359c69943681f71330534f39d95136"
+      },
+      "backend_config_key": "cpml_alpha_backend",
+      "source_report": "qc/ti_q_controls_20261112/report.json",
+      "source_report_sha256": "88db30a634a1331571952b30d6bce078fa486bf94b8cc760ff4e2cf8f3128035",
+      "checks": [
+        {
+          "name": "网格/时间步控制",
+          "state": "passed",
+          "summary": "h4→h2完整Vx/Vz差0.1194%/0.1068%；dt减半0.0836%/0.0873%。",
+          "report": "experiments/ti_q_controls_20261112/RESULTS_zh.md"
+        },
+        {
+          "name": "独立参考、边界及实际Q理论",
+          "state": "not_checked",
+          "summary": "缺匹配SLS独立参考与新边界控制，实际Q理论不可用；只允许明确弹性对照。",
+          "report": "experiments/ti_q_controls_20261112/RESULTS_zh.md"
+        }
+      ]
+    },
+    {
+      "file": "attenuation_hill_array300.json",
+      "template_sha256": "df85a83161e3e3b766a7303e78d9399c730314ae1ac4564ab12bd30b7d2c51a6",
+      "scientific_status": "terrain_numerical_control_passed_reference_pending",
+      "label": "Q山丘300 m/2 m，完整1.6 s；网格h4→h2完整Vx/Vz差0.1533%/0.1387%，固定窗PS/FH通过本项。独立地形参考及其余数值控制未验收；后端实际单精度。",
+      "backend_sha256": {
+        "xspecfem2D": "44037ae887cbc9c50b09b38e4bf0fc0e841a891704a0c9a0f012600baaba009d",
+        "xmeshfem2D": "4deff9a4f126e6b7b169b49990130802bb359c69943681f71330534f39d95136"
+      },
+      "backend_config_key": "cpml_alpha_backend",
+      "source_report": "qc/hill_array300_20261112/q_report.json",
+      "source_report_sha256": "c761df75786192feea7de5a4f65ae816d9244ae4e95145e8db53c5139b58f2aa",
+      "checks": [
+        {
+          "name": "网格h4→h2与完整波形/PS/FH",
+          "state": "passed",
+          "summary": "Q山丘300 m/2 m，完整1.6 s；网格h4→h2完整Vx/Vz差0.1533%/0.1387%，固定窗PS/FH通过本项。独立地形参考及其余数值控制未验收；后端实际单精度。",
+          "report": "qc/hill_array300_20261112/q_report.json"
+        },
+        {
+          "name": "独立参考及剩余控制",
+          "state": "not_checked",
+          "summary": "同求解器单项敏感性检查不等于全部精度认证；中心1D理论只是参考。",
+          "report": "qc/hill_array300_20261112/q_report.json"
+        }
+      ]
+    },
+    {
+      "file": "vti_hill_array300.json",
+      "template_sha256": "6943d3d152ee870280b91237bf85b77471e66439c3d43aef3c5403d59d13fb7f",
+      "scientific_status": "terrain_numerical_control_passed_reference_pending",
+      "label": "VTI山丘300 m/2 m，完整1.6 s；dt减半完整Vx/Vz差0.1490%/0.1514%，固定窗PS/FH通过本项。独立地形参考及其余数值控制未验收；后端实际双精度。",
+      "backend_sha256": {
+        "xmeshfem2D": "4f75f08773bf8ee366312ac246584021f6e92074b6bd11d575e023c4fbe1928a",
+        "xspecfem2D": "967ad0d518da9157b174167547c42d457ede2a18b6e1b9f545817e3eb51f1f4f"
+      },
+      "backend_config_key": "ti_layered_backend",
+      "source_report": "qc/hill_array300_20261112/vti_report.json",
+      "source_report_sha256": "7a3df54c79520c6d5f8ab319dba0dcba970eac68896c257ee5709d271898772c",
+      "checks": [
+        {
+          "name": "dt减半与完整波形/PS/FH",
+          "state": "passed",
+          "summary": "VTI山丘300 m/2 m，完整1.6 s；dt减半完整Vx/Vz差0.1490%/0.1514%，固定窗PS/FH通过本项。独立地形参考及其余数值控制未验收；后端实际双精度。",
+          "report": "qc/hill_array300_20261112/vti_report.json"
+        },
+        {
+          "name": "独立参考及剩余控制",
+          "state": "not_checked",
+          "summary": "同求解器单项敏感性检查不等于全部精度认证；中心1D理论只是参考。",
+          "report": "qc/hill_array300_20261112/vti_report.json"
+        }
+      ]
+    },
+    {
+      "file": "hti_hill_array300.json",
+      "template_sha256": "eaf0b400cb11cf8bbedc1dcdc1019493118571eed957dcbe7b41d28c5ae4b8c6",
+      "scientific_status": "terrain_numerical_control_passed_reference_pending",
+      "label": "HTI山丘300 m/2 m，完整1.6 s；dt减半完整Vx/Vz差0.1486%/0.1507%，固定窗PS/FH通过本项。独立地形参考及其余数值控制未验收；后端实际双精度。",
+      "backend_sha256": {
+        "xmeshfem2D": "4f75f08773bf8ee366312ac246584021f6e92074b6bd11d575e023c4fbe1928a",
+        "xspecfem2D": "967ad0d518da9157b174167547c42d457ede2a18b6e1b9f545817e3eb51f1f4f"
+      },
+      "backend_config_key": "ti_layered_backend",
+      "source_report": "qc/hill_array300_20261112/hti_report.json",
+      "source_report_sha256": "a8e60ef875aa432378338744fa6a2f7637cf9572ab1e4735bca19de013f9e0aa",
+      "checks": [
+        {
+          "name": "dt减半与完整波形/PS/FH",
+          "state": "passed",
+          "summary": "HTI山丘300 m/2 m，完整1.6 s；dt减半完整Vx/Vz差0.1486%/0.1507%，固定窗PS/FH通过本项。独立地形参考及其余数值控制未验收；后端实际双精度。",
+          "report": "qc/hill_array300_20261112/hti_report.json"
+        },
+        {
+          "name": "独立参考及剩余控制",
+          "state": "not_checked",
+          "summary": "同求解器单项敏感性检查不等于全部精度认证；中心1D理论只是参考。",
+          "report": "qc/hill_array300_20261112/hti_report.json"
+        }
+      ]
+    }
+  ],
+  "report": "experiments/material_scenes_20261110/RESULTS_zh.md",
+  "additional_report": "experiments/material_convergence_20261110/RESULTS_zh.md"
+}

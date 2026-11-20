@@ -1,0 +1,21 @@
+{
+  "schema": "surface_wave_analysis_v1",
+  "options": {
+    "fmin": 15,
+    "fmax": 50,
+    "cmin": 300,
+    "cmax": 800,
+    "dc": 1.0,
+    "vslow": 350,
+    "vfast": 650,
+    "pad": 0.04,
+    "right": true,
+    "gated": true,
+    "min_offset": 0,
+    "max_offset": 0,
+    "spatial_weighting": "equal",
+    "method": "PS"
+  },
+  "origin_model_sha256": "349b71dd6486493d5dcf2014743a067d3cf52314e12242d7e9a5add84c278af4",
+  "note": "600 m等权；完整记录和PS/FH图已查看。历史重叠检查不等于全部新增远道/晚段的独立精度验收；仍有旁瓣。"
+}

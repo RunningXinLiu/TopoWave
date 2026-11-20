@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "width_m": 480,
+  "surface": [],
+  "layers": [[20, 900, 300, 1750], [160, 1700, 800, 2150]],
+  "shot_x_m": 120,
+  "shot_depth_m": 1,
+  "f0_hz": 12,
+  "first_x_m": 130,
+  "spacing_m": 2,
+  "receivers": 61,
+  "receiver_depth_m": 0,
+  "element_m": 4,
+  "dt_s": 0.00016,
+  "nstep": 6001,
+  "sample_stride": 5
+}

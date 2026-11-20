@@ -1,0 +1,18 @@
+{
+  "flat_far.json": {
+    "sha256": "69189922b8aa3714a8066c921b4d26a5b17e9cd8ab639ca8657aed941e6fa69f",
+    "original_input_sha256": "e01d03b6b4f9f6ce5f20fb54da82900c71f9eca378b448bc436d9d8e68a8e084",
+    "metadata_change": "refresh boundary-domain signature only; physical/numerical inputs preserved",
+    "label": "本平地18Hz配置：完整Vz参考误差0.458%、窗内0.382%；3秒后弱段2.053%，Vx独立精度未验。",
+    "report": "experiments/stacey_domain/RESULTS_zh.md",
+    "server_run": "stacey_domain_20261108/flat_far"
+  },
+  "hill_far.json": {
+    "sha256": "125197844f6dedcbed80c8a7e1cf483df9841c4402f4ef506f77ff3b09c0b62a",
+    "original_input_sha256": "f34f84dc2472382f8b1472d5476b22e0f8d007089b82d660f36b95e87e42cda5",
+    "metadata_change": "refresh boundary-domain signature only; physical/numerical inputs preserved",
+    "label": "本5m山丘18Hz配置：边界距离对照Vz差0.793%、窗内0.401%；Vx差2.099%、弱段5.823%；非独立真解验证。",
+    "report": "experiments/stacey_domain/RESULTS_zh.md",
+    "server_run": "stacey_domain_20261108/hill_far"
+  }
+}

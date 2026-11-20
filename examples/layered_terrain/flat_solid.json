@@ -1,0 +1,49 @@
+{
+  "schema": "region_geometry_v1",
+  "model": {
+    "schema": 1,
+    "physics": "elastic",
+    "material_model": "isotropic",
+    "width_m": 480,
+    "layers": [
+      [
+        33,
+        600,
+        280,
+        1750
+      ],
+      [
+        30,
+        900,
+        470,
+        1900
+      ],
+      [
+        75,
+        1280,
+        700,
+        2100
+      ]
+    ],
+    "surface": [],
+    "interface_relief": [],
+    "shot_x_m": 99,
+    "shot_depth_m": 0,
+    "source_mode": "surface_force",
+    "f0_hz": 16,
+    "source_t0_s": 0.09,
+    "first_x_m": 117,
+    "spacing_m": 3.0,
+    "receivers": 93,
+    "receiver_depth_m": 0,
+    "element_m": 3.0,
+    "dt_s": 0.00014,
+    "nstep": 9800,
+    "sample_stride": 5,
+    "snapshot_stride": 490,
+    "boundary": "stacey"
+  },
+  "regions": [],
+  "surface_warp_depth_m": null,
+  "surface_interpolation": "linear"
+}

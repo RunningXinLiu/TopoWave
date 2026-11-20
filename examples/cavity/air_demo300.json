@@ -1,0 +1,47 @@
+{
+  "schema": "rect_region_v1",
+  "model": {
+    "schema": 1,
+    "physics": "elastic",
+    "material_model": "isotropic",
+    "width_m": 960,
+    "layers": [
+      [
+        440,
+        1000,
+        500,
+        1800
+      ]
+    ],
+    "surface": [],
+    "interface_relief": [],
+    "shot_x_m": 300,
+    "shot_depth_m": 0,
+    "source_mode": "surface_force",
+    "f0_hz": 25,
+    "source_t0_s": 0.12,
+    "first_x_m": 320,
+    "spacing_m": 2,
+    "receivers": 151,
+    "receiver_depth_m": 0,
+    "element_m": 2,
+    "dt_s": 5e-05,
+    "nstep": 24000,
+    "sample_stride": 8,
+    "snapshot_stride": 1200,
+    "boundary": "stacey"
+  },
+  "rectangle_m": [
+    348,
+    372,
+    -28,
+    -12
+  ],
+  "interior": {
+    "kind": "fluid",
+    "name": "空气候选",
+    "rho_kg_m3": 1.2,
+    "sound_speed_m_s": 343.0,
+    "reference": "约20°C常压；用户应按实际条件编辑"
+  }
+}

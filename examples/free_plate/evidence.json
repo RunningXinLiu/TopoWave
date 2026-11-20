@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "entries": [
+    {
+      "file": "flat12_shot.json",
+      "template_sha256": "e1461d62a9297d7ed7b7bd36edde9f55ff9fb29643db910f1fba666998724f31",
+      "scientific_status": "passed_scoped_numerical_controls",
+      "label": "12m均匀自由板、600m等权、4s：网格/dt/远边界数值控制通过；完整Vx/Vz最大差0.1688%，晚段最大0.3109%，固定窗PS/FH最坏逐频0.1073%。A0/S0/部分A1与理论相符，弱S1和完整独立波形参考未验收；非空气空层。仅限此输入及双精度后端。",
+      "backend_config_key": "free_plate_backend",
+      "backend_sha256": {
+        "xmeshfem2D": "4f75f08773bf8ee366312ac246584021f6e92074b6bd11d575e023c4fbe1928a",
+        "xspecfem2D": "967ad0d518da9157b174167547c42d457ede2a18b6e1b9f545817e3eb51f1f4f"
+      },
+      "source_report": "qc/free_plate_20261113/acceptance.json",
+      "source_report_sha256": "fa8f5bf8c6e02253ad68fbaa68bb38d59fd6f7f5785cdb0a694443318fa99c77",
+      "checks": [
+        {
+          "name": "网格/时间步/边界距离",
+          "state": "passed",
+          "summary": "全记录及t>2s Vx/Vz <1%；固定窗PS/FH整体<1%、最坏逐频<3%，均通过冻结门槛。",
+          "report": "experiments/free_plate_20261113/RESULTS_zh.md"
+        },
+        {
+          "name": "A/S理论与完整独立参考",
+          "state": "partial",
+          "summary": "可见A0/S0/部分A1峰位相符；弱S1不认证，无完整独立受迫波形参考。",
+          "report": "experiments/free_plate_20261113/RESULTS_zh.md"
+        }
+      ]
+    }
+  ]
+}

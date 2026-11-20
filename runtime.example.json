@@ -1,0 +1,76 @@
+{
+  "ssh_host": "your-server",
+  "run_parent": "/absolute/path/to/runs",
+  "bin_dir": "/absolute/path/to/specfem2d/bin",
+  "binary_sha256": {
+    "xspecfem2D": "REPLACE_WITH_64_HEX_SHA256",
+    "xmeshfem2D": "REPLACE_WITH_64_HEX_SHA256"
+  },
+  "template_result_locations": {},
+  "theory_backends": {},
+  "fluid_cavity_backend": {
+    "capability": "acoustic_elastic_double_dual_v1",
+    "bin_dir": "/absolute/path/to/verified/dual_double_build/bin",
+    "binary_sha256": {
+      "xspecfem2D": "REPLACE_WITH_64_HEX_SHA256",
+      "xmeshfem2D": "REPLACE_WITH_64_HEX_SHA256"
+    }
+  },
+  "q_cavity_backend": {
+    "capability": "iso_q_dry_double_v1",
+    "bin_dir": "/absolute/path/to/verified/double_build/bin",
+    "binary_sha256": {
+      "xspecfem2D": "REPLACE_WITH_64_HEX_SHA256",
+      "xmeshfem2D": "REPLACE_WITH_64_HEX_SHA256"
+    }
+  },
+  "dry_cavity_backend": {
+    "capability": "iso_dry_double_v1",
+    "bin_dir": "/absolute/path/to/verified/double_build/bin",
+    "binary_sha256": {
+      "xspecfem2D": "REPLACE_WITH_64_HEX_SHA256",
+      "xmeshfem2D": "REPLACE_WITH_64_HEX_SHA256"
+    }
+  },
+  "q_fluid_cavity_backend": {
+    "capability": "iso_q_fluid_double_dual_v1",
+    "bin_dir": "/absolute/path/to/verified/dual_double_build/bin",
+    "binary_sha256": {
+      "xspecfem2D": "REPLACE_WITH_64_HEX_SHA256",
+      "xmeshfem2D": "REPLACE_WITH_64_HEX_SHA256"
+    }
+  },
+  "geometry_cavity_backend": {
+    "capability": "iso_geometry_double_dual_gll5_v1",
+    "bin_dir": "/absolute/path/to/verified/dual_double_build/bin",
+    "binary_sha256": {
+      "xspecfem2D": "REPLACE_WITH_64_HEX_SHA256",
+      "xmeshfem2D": "REPLACE_WITH_64_HEX_SHA256"
+    }
+  },
+  "ti_layered_backend": {
+    "capability": "ti_layered_double_v1",
+    "bin_dir": "/absolute/path/to/audited/double/bin",
+    "binary_sha256": {
+      "xmeshfem2D": "REPLACE_WITH_SHA256",
+      "xspecfem2D": "REPLACE_WITH_SHA256"
+    }
+  },
+  "computed_result_locations": {},
+  "free_plate_backend": {
+    "capability": "iso_free_plate_double_gll5_v1",
+    "bin_dir": "/absolute/path/to/verified/double_build/bin",
+    "binary_sha256": {
+      "xspecfem2D": "REPLACE_WITH_64_HEX_SHA256",
+      "xmeshfem2D": "REPLACE_WITH_64_HEX_SHA256"
+    }
+  },
+  "layered_fluid_backend": {
+    "capability": "solid_fluid_solid_double_dual_gll5_v1",
+    "bin_dir": "/absolute/path/to/verified/dual_double_build/bin",
+    "binary_sha256": {
+      "xspecfem2D": "REPLACE_WITH_64_HEX_SHA256",
+      "xmeshfem2D": "REPLACE_WITH_64_HEX_SHA256"
+    }
+  }
+}

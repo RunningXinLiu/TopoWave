@@ -1,0 +1,68 @@
+{
+  "schema": "active_shot_template_v1",
+  "model": {
+    "schema": 1,
+    "physics": "coupled",
+    "material_model": "isotropic",
+    "width_m": 1800,
+    "layers": [
+      [
+        12,
+        1000,
+        500,
+        1800
+      ],
+      [
+        16,
+        343.0,
+        0.0,
+        1.2
+      ],
+      [
+        412,
+        1000,
+        500,
+        1800
+      ]
+    ],
+    "surface": [],
+    "interface_relief": [],
+    "shot_x_m": 600,
+    "shot_depth_m": 0,
+    "source_mode": "surface_force",
+    "f0_hz": 25,
+    "source_t0_s": 0.12,
+    "first_x_m": 620,
+    "spacing_m": 2.0,
+    "receivers": 301,
+    "receiver_depth_m": 0,
+    "element_m": 2.0,
+    "dt_s": 5e-05,
+    "nstep": 80000,
+    "sample_stride": 10,
+    "snapshot_stride": 4000,
+    "boundary": "stacey",
+    "domain_kind": "solid_fluid_layers"
+  },
+  "analysis": {
+    "schema": "surface_wave_analysis_v1",
+    "options": {
+      "right": true,
+      "fmin": 15.0,
+      "fmax": 50.0,
+      "cmin": 250.0,
+      "cmax": 1200.0,
+      "dc": 1.0,
+      "gated": true,
+      "vslow": 250.0,
+      "vfast": 950.0,
+      "pad": 0.08,
+      "min_offset": 0,
+      "max_offset": 0,
+      "spatial_weighting": "equal",
+      "method": "PS"
+    },
+    "origin_model_sha256": "9bec369667b8cfda0a3a852eb1517c92649b3e6e3305c12a4bde419beaebb22b",
+    "note": "实际固—空气—固模型的待核验候选窗；仅equal空间权重。中间层有声压和声弹耦合；不用自由板理论替代。"
+  }
+}

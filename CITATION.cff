@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "使用本工作台时请注明软件及所用求解器、理论后端和版本。"
+title: "TopoWave：地形波场与主动源面波实验工作台"
+type: software
+authors:
+  - family-names: Liu
+    given-names: Xin
+    website: "https://runningxinliu.github.io/"
+    email: "xinliu_geo@outlook.com"
+abstract: "基于PySide6与SPECFEM2D的主动源单炮工作台，支持自定义地表和层界、实际网格QC、波场与完整道集，以及面波窗PS/FH和台阵中心一维理论参考。科学适用范围按具体模板分别登记。"
+repository-code: "https://github.com/RunningXinLiu/TopoWave"

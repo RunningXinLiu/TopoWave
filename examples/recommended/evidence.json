@@ -1,0 +1,97 @@
+{
+  "schema": 1,
+  "entries": [
+    {
+      "file": "vti_flat.json",
+      "template_sha256": "4a473e8f615ee9af148fa32fbc498ff52cef4cc97a41d1be2c25d84e3baa9f06",
+      "scientific_status": "passed_scoped_waveform_reference",
+      "label": "VTI平地大域：完整0.8s独立参考 Vz 0.0936% / Vx 0.0875%；100m阵列的频散分辨率有限。只适用于此输入、双精度后端及记录时长。",
+      "checks": [
+        {
+          "name": "完整波形独立参考",
+          "state": "passed",
+          "summary": "固定大域对独立半空间参考，完整记录两分量均小于1%。",
+          "report": "docs/cavity/TI_BOUNDARY_zh.md"
+        },
+        {
+          "name": "频散与高阶覆盖",
+          "state": "not_checked",
+          "summary": "窗口为可编辑候选；不继承波形检查作为全频带/高阶精度认证。",
+          "report": "docs/cavity/TI_BOUNDARY_zh.md"
+        }
+      ],
+      "backend_sha256": {
+        "xmeshfem2D": "4f75f08773bf8ee366312ac246584021f6e92074b6bd11d575e023c4fbe1928a",
+        "xspecfem2D": "967ad0d518da9157b174167547c42d457ede2a18b6e1b9f545817e3eb51f1f4f"
+      },
+      "source_report": "qc/ti_boundary_control/report.json",
+      "source_report_sha256": "a51915f13c97bd56b60ead654103f116bd1d37cb3a148b10de7527f4c1616e6c"
+    },
+    {
+      "file": "hti_flat.json",
+      "template_sha256": "29606bb852a8b9564e58e9b48a88ba23fa6674ca0d28fa4d0007df60adc08bc7",
+      "scientific_status": "passed_scoped_waveform_reference",
+      "label": "HTI平地大域：完整0.8s独立参考 Vz 0.0850% / Vx 0.0796%；100m阵列的频散分辨率有限。只适用于此输入、双精度后端及记录时长。",
+      "checks": [
+        {
+          "name": "完整波形独立参考",
+          "state": "passed",
+          "summary": "固定大域对独立半空间参考，完整记录两分量均小于1%。",
+          "report": "docs/cavity/TI_BOUNDARY_zh.md"
+        },
+        {
+          "name": "频散与高阶覆盖",
+          "state": "not_checked",
+          "summary": "窗口为可编辑候选；不继承波形检查作为全频带/高阶精度认证。",
+          "report": "docs/cavity/TI_BOUNDARY_zh.md"
+        }
+      ],
+      "backend_sha256": {
+        "xmeshfem2D": "4f75f08773bf8ee366312ac246584021f6e92074b6bd11d575e023c4fbe1928a",
+        "xspecfem2D": "967ad0d518da9157b174167547c42d457ede2a18b6e1b9f545817e3eb51f1f4f"
+      },
+      "source_report": "qc/ti_boundary_control/report.json",
+      "source_report_sha256": "a51915f13c97bd56b60ead654103f116bd1d37cb3a148b10de7527f4c1616e6c"
+    },
+    {
+      "file": "vti_array300.json",
+      "template_sha256": "45cbca80b6c0e27a71307ca86afc0c50f3a964fc62e0e9002dc2604a2b700a52",
+      "scientific_status": "passed_scoped_waveform_and_spectra",
+      "label": "VTI平地300 m/2 m阵列，完整1.6 s Vx/Vz对独立参考0.9881%/0.8786%；固定窗PS/FH通过本轮门槛。Vx接近1%限值。仅限此输入、后端与记录；不等于任意模型或全域应力认证。",
+      "checks": [
+        {
+          "name": "完整波形与PS/FH",
+          "state": "passed",
+          "summary": "VTI平地300 m/2 m阵列，完整1.6 s Vx/Vz对独立参考0.9881%/0.8786%；固定窗PS/FH通过本轮门槛。Vx接近1%限值。仅限此输入、后端与记录；不等于任意模型或全域应力认证。",
+          "report": "qc/ti_q_array300_20261112/sem/report.json"
+        }
+      ],
+      "backend_sha256": {
+        "xmeshfem2D": "4f75f08773bf8ee366312ac246584021f6e92074b6bd11d575e023c4fbe1928a",
+        "xspecfem2D": "967ad0d518da9157b174167547c42d457ede2a18b6e1b9f545817e3eb51f1f4f"
+      },
+      "source_report": "qc/ti_q_array300_20261112/sem/report.json",
+      "source_report_sha256": "b30bf3b12c4d09f60a21dba1882f98bacbd75721507773850b4d6abea4293a04"
+    },
+    {
+      "file": "hti_array300.json",
+      "template_sha256": "18789e8f943f42bdb301187607ced4c43740db47da082151503d45b37a07b7dc",
+      "scientific_status": "passed_scoped_waveform_and_spectra",
+      "label": "HTI平地300 m/2 m阵列，完整1.6 s Vx/Vz对独立参考0.3343%/0.3225%；固定窗PS/FH通过本轮门槛。使用扩大域结果；原较小域失败保留。仅限此输入、后端与记录；不等于任意模型或全域应力认证。",
+      "checks": [
+        {
+          "name": "完整波形与PS/FH",
+          "state": "passed",
+          "summary": "HTI平地300 m/2 m阵列，完整1.6 s Vx/Vz对独立参考0.3343%/0.3225%；固定窗PS/FH通过本轮门槛。使用扩大域结果；原较小域失败保留。仅限此输入、后端与记录；不等于任意模型或全域应力认证。",
+          "report": "qc/ti_q_controls_20261112/report.json"
+        }
+      ],
+      "backend_sha256": {
+        "xmeshfem2D": "4f75f08773bf8ee366312ac246584021f6e92074b6bd11d575e023c4fbe1928a",
+        "xspecfem2D": "967ad0d518da9157b174167547c42d457ede2a18b6e1b9f545817e3eb51f1f4f"
+      },
+      "source_report": "qc/ti_q_controls_20261112/report.json",
+      "source_report_sha256": "88db30a634a1331571952b30d6bce078fa486bf94b8cc760ff4e2cf8f3128035"
+    }
+  ]
+}

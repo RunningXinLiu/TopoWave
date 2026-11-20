@@ -1,0 +1,69 @@
+{
+  "schema": "region_geometry_v1",
+  "model": {
+    "schema": 1,
+    "physics": "elastic",
+    "material_model": "isotropic",
+    "width_m": 480,
+    "layers": [
+      [
+        33,
+        600,
+        280,
+        1750
+      ],
+      [
+        30,
+        900,
+        470,
+        1900
+      ],
+      [
+        75,
+        1280,
+        700,
+        2100
+      ]
+    ],
+    "surface": [],
+    "interface_relief": [],
+    "shot_x_m": 99,
+    "shot_depth_m": 0,
+    "source_mode": "surface_force",
+    "f0_hz": 16,
+    "source_t0_s": 0.09,
+    "first_x_m": 117,
+    "spacing_m": 3.0,
+    "receivers": 93,
+    "receiver_depth_m": 0,
+    "element_m": 3.0,
+    "dt_s": 0.00014,
+    "nstep": 9800,
+    "sample_stride": 5,
+    "snapshot_stride": 490,
+    "boundary": "stacey"
+  },
+  "regions": [
+    {
+      "id": "r1",
+      "shape": {
+        "kind": "rectangle",
+        "bounds_m": [
+          303,
+          339,
+          -27,
+          -9
+        ]
+      },
+      "interior": {
+        "kind": "fluid",
+        "name": "清水候选",
+        "rho_kg_m3": 998.0,
+        "sound_speed_m_s": 1482.0,
+        "reference": "约20°C；用户应按实际条件编辑"
+      }
+    }
+  ],
+  "surface_warp_depth_m": null,
+  "surface_interpolation": "linear"
+}

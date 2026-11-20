@@ -1,0 +1,2183 @@
+{
+  "schema": "region_evidence_v1",
+  "entries": [
+    {
+      "case_sha256": "d64702b5a79f49a2ad95d19725710bb40f16a11fc28b22efca6f1e4132b3f677",
+      "case": {
+        "schema": "rect_region_v1",
+        "model": {
+          "schema": 1,
+          "physics": "elastic",
+          "material_model": "isotropic",
+          "width_m": 480,
+          "layers": [
+            [
+              240,
+              1000,
+              500,
+              1800
+            ]
+          ],
+          "surface": [],
+          "interface_relief": [],
+          "shot_x_m": 180,
+          "shot_depth_m": 0,
+          "source_mode": "surface_force",
+          "f0_hz": 25,
+          "source_t0_s": 0.12,
+          "first_x_m": 200,
+          "spacing_m": 2,
+          "receivers": 51,
+          "receiver_depth_m": 0,
+          "element_m": 2,
+          "dt_s": 5e-05,
+          "nstep": 12000,
+          "sample_stride": 8,
+          "snapshot_stride": 600,
+          "boundary": "stacey"
+        },
+        "rectangle_m": [
+          228,
+          252,
+          -40,
+          -24
+        ],
+        "interior": {
+          "kind": "traction_free"
+        }
+      },
+      "backend_evidence": {
+        "report": "qc/elastic_independent/report.json",
+        "report_sha256": "22a254b39741b4cde9113892bcf193b76c5078bde21419e24913b35d7ba2c884",
+        "key": "sem_backend"
+      },
+      "limitation": "限本组480×240m、单层无损ISO矩形洞及0.6s积分；独立P1是本项目新写参考，不是精确解或第三方认证。修改输入不继承；原小域/粗参考失败保留。 当前交付限定串行、完整单炮速度/流体压力；尖角应力未认证。平直壁检查仅限所列中段。各观测量状态分开列出。",
+      "checks": [
+        {
+          "label": "实际模板能量收支",
+          "status": "通过本组筛查",
+          "detail": "最大闭合残差 0.05970%，门槛1%；含源作功、外流及适用的Q耗散。",
+          "report": "qc/cavity_closeout/acceptance.json",
+          "report_sha256": "8ca8584ce626752a190edef2f480d47372e79e4a7b35a0ced986652253cccaea"
+        },
+        {
+          "label": "实际模板平直壁牵引",
+          "status": "通过限定壁段筛查",
+          "detail": "四壁中段最坏相对RMS 0.04484%，门槛1%；分母为本例固体应力；固定排除距角点4m，不认证尖角。",
+          "report": "qc/cavity_closeout/acceptance.json",
+          "report_sha256": "8ca8584ce626752a190edef2f480d47372e79e4a7b35a0ced986652253cccaea"
+        },
+        {
+          "label": "尖角及邻域局部应力",
+          "status": "未认证",
+          "detail": "整边结果保留；主波形通过不等于尖角强式应力准确。本版不作为尖角应力计算工具。",
+          "report": "qc/cavity_closeout/acceptance.json",
+          "report_sha256": "8ca8584ce626752a190edef2f480d47372e79e4a7b35a0ced986652253cccaea"
+        },
+        {
+          "label": "运行方式",
+          "status": "限定串行",
+          "detail": "实际导出NPROC=1且运行前校验；MPI研究修补未替换产品后端，严格并行门槛仍有未通过项。",
+          "report": "qc/cavity_closeout/acceptance.json",
+          "report_sha256": "8ca8584ce626752a190edef2f480d47372e79e4a7b35a0ced986652253cccaea"
+        },
+        {
+          "label": "空间 h2→h1",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.09566%；Vz 0.06029%。门槛 1%；完整记录；细网格为分母",
+          "report": "qc/elastic_cavity/convergence/report.json",
+          "report_sha256": "eb2bb1258927060bded01c16eeaa481fdae5725a6c39df69dc3413f30ec62295"
+        },
+        {
+          "label": "时间步减半",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.01628%；Vz 0.01695%。门槛 1%；完整记录；半dt为分母",
+          "report": "qc/elastic_cavity/convergence/report.json",
+          "report_sha256": "eb2bb1258927060bded01c16eeaa481fdae5725a6c39df69dc3413f30ec62295"
+        },
+        {
+          "label": "外边界 480→640",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.03331%；Vz 0.01440%。门槛 1%；完整记录；大域为分母",
+          "report": "qc/q_cavity/elastic_boundary/report.json",
+          "report_sha256": "d5074d768a39d56912c30d02caed0435abae9173ac67b79056850f8e97814977"
+        },
+        {
+          "label": "独立P1完整记录",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.24108%；Vz 0.23932%。门槛 1%；以SPECFEM记录为分母",
+          "report": "qc/elastic_independent/report.json",
+          "report_sha256": "22a254b39741b4cde9113892bcf193b76c5078bde21419e24913b35d7ba2c884"
+        },
+        {
+          "label": "独立P1洞体扰动",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.43789%；Vz 0.43171%。门槛 2%；两程序各自有洞减无洞；SPECFEM扰动为分母",
+          "report": "qc/elastic_independent/report.json",
+          "report_sha256": "22a254b39741b4cde9113892bcf193b76c5078bde21419e24913b35d7ba2c884"
+        }
+      ]
+    },
+    {
+      "case_sha256": "3816663ec7b90fce4bf9de4e9316f16f3c0ba88bd1efa9ab3048c0bd2c0ebe0e",
+      "case": {
+        "schema": "rect_region_v1",
+        "model": {
+          "schema": 1,
+          "physics": "elastic",
+          "material_model": "isotropic",
+          "width_m": 480,
+          "layers": [
+            [
+              240,
+              1000,
+              500,
+              1800
+            ]
+          ],
+          "surface": [],
+          "interface_relief": [],
+          "shot_x_m": 180,
+          "shot_depth_m": 0,
+          "source_mode": "surface_force",
+          "f0_hz": 25,
+          "source_t0_s": 0.12,
+          "first_x_m": 200,
+          "spacing_m": 2,
+          "receivers": 51,
+          "receiver_depth_m": 0,
+          "element_m": 2,
+          "dt_s": 5e-05,
+          "nstep": 12000,
+          "sample_stride": 8,
+          "snapshot_stride": 600,
+          "boundary": "stacey"
+        },
+        "rectangle_m": [
+          228,
+          252,
+          -40,
+          -24
+        ],
+        "interior": {
+          "kind": "fluid",
+          "name": "空气候选",
+          "rho_kg_m3": 1.2,
+          "sound_speed_m_s": 343.0,
+          "reference": "约20°C常压；用户应按实际条件编辑"
+        }
+      },
+      "checks": [
+        {
+          "label": "实际模板能量收支",
+          "status": "通过本组筛查",
+          "detail": "最大闭合残差 0.05970%，门槛1%；含源作功、外流及适用的Q耗散。",
+          "report": "qc/cavity_closeout/acceptance.json",
+          "report_sha256": "8ca8584ce626752a190edef2f480d47372e79e4a7b35a0ced986652253cccaea"
+        },
+        {
+          "label": "实际模板平直壁牵引",
+          "status": "未通过",
+          "detail": "四壁中段最坏相对RMS 33.26554%，门槛1%；分母为本例流体压力；固定排除距角点4m，不认证尖角。",
+          "report": "qc/cavity_closeout/acceptance.json",
+          "report_sha256": "8ca8584ce626752a190edef2f480d47372e79e4a7b35a0ced986652253cccaea"
+        },
+        {
+          "label": "实际模板法向速度连续性",
+          "status": "通过限定壁段筛查",
+          "detail": "四壁中段最坏相对RMS 0.96509%，门槛1%；相同角点排除范围。",
+          "report": "qc/cavity_closeout/acceptance.json",
+          "report_sha256": "8ca8584ce626752a190edef2f480d47372e79e4a7b35a0ced986652253cccaea"
+        },
+        {
+          "label": "尖角及邻域局部应力",
+          "status": "未认证",
+          "detail": "整边结果保留；主波形通过不等于尖角强式应力准确。本版不作为尖角应力计算工具。",
+          "report": "qc/cavity_closeout/acceptance.json",
+          "report_sha256": "8ca8584ce626752a190edef2f480d47372e79e4a7b35a0ced986652253cccaea"
+        },
+        {
+          "label": "运行方式",
+          "status": "限定串行",
+          "detail": "实际导出NPROC=1且运行前校验；MPI研究修补未替换产品后端，严格并行门槛仍有未通过项。",
+          "report": "qc/cavity_closeout/acceptance.json",
+          "report_sha256": "8ca8584ce626752a190edef2f480d47372e79e4a7b35a0ced986652253cccaea"
+        },
+        {
+          "label": "本域空间 h2→h1",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.09549%；Vz 0.06018%；pressure 0.20796%。门槛 1%；完整记录；细网格为分母",
+          "report": "qc/region_controls/report.json",
+          "report_sha256": "5ded455f4091bd0193ad5d22313e71108756a695ac812f9b8017960b6ca660de"
+        },
+        {
+          "label": "本域时间步减半",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.01628%；Vz 0.01695%；pressure 0.01855%。门槛 1%；完整记录；半dt为分母",
+          "report": "qc/region_controls/report.json",
+          "report_sha256": "5ded455f4091bd0193ad5d22313e71108756a695ac812f9b8017960b6ca660de"
+        },
+        {
+          "label": "外边界 480→640",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.03331%；Vz 0.01440%；pressure 0.02548%。门槛1%；完整记录，大域为分母。",
+          "report": "qc/region_phase4/boundary_followup/report.json",
+          "report_sha256": "ce715ca06ba4a8e8c01ace45671b427dd64116c651be0b847fcacb43b3872084"
+        },
+        {
+          "label": "独立P1有限洞体参考",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.23742%；Vz 0.23468%；pressure 0.35412%。门槛 1%；参考自身解析、网格和dt检查通过；完整记录，独立参考为分母",
+          "report": "qc/fluid_independent/report.json",
+          "report_sha256": "5c8a94c8dbbf20b84542af022dc46c7032c5f1260f75d7af47142cfb7e43e5fe"
+        },
+        {
+          "label": "实际双场后端回归",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.00000%；Vz 0.00000%；pressure 0.00000%。门槛 1e-08%；相同完整输入的双场与原双精度后端对照；仅本组回归",
+          "report": "qc/q_fluid_integration/report.json",
+          "report_sha256": "8fd39eae13e3754f8868d1d17bd1f23dcdaf73da66fd3171661b7a20400df15d"
+        }
+      ],
+      "backend_evidence": {
+        "report": "qc/q_fluid_integration/report.json",
+        "report_sha256": "8fd39eae13e3754f8868d1d17bd1f23dcdaf73da66fd3171661b7a20400df15d",
+        "key": "backend"
+      },
+      "limitation": "限本组材料、源/接收、矩形和0.6s积分；新写独立参考不是精确解或成熟第三方认证。双场仅完成相同基线输入回归，旧网格/dt/边界控制未声称全部在双场后端重跑；修改配置不自动继承。 当前交付限定串行、完整单炮速度/流体压力；尖角应力未认证。本模板平直壁牵引检查未通过。各观测量状态分开列出。"
+    },
+    {
+      "case_sha256": "b084e1c2c654ca32949a445bcf0efca2c40e57c8c35de627f0d8f4e825863404",
+      "case": {
+        "schema": "rect_region_v1",
+        "model": {
+          "schema": 1,
+          "physics": "elastic",
+          "material_model": "isotropic",
+          "width_m": 480,
+          "layers": [
+            [
+              240,
+              1000,
+              500,
+              1800
+            ]
+          ],
+          "surface": [],
+          "interface_relief": [],
+          "shot_x_m": 180,
+          "shot_depth_m": 0,
+          "source_mode": "surface_force",
+          "f0_hz": 25,
+          "source_t0_s": 0.12,
+          "first_x_m": 200,
+          "spacing_m": 2,
+          "receivers": 51,
+          "receiver_depth_m": 0,
+          "element_m": 2,
+          "dt_s": 5e-05,
+          "nstep": 12000,
+          "sample_stride": 8,
+          "snapshot_stride": 600,
+          "boundary": "stacey"
+        },
+        "rectangle_m": [
+          228,
+          252,
+          -40,
+          -24
+        ],
+        "interior": {
+          "kind": "fluid",
+          "name": "清水候选",
+          "rho_kg_m3": 998.0,
+          "sound_speed_m_s": 1482.0,
+          "reference": "约20°C；用户应按实际条件编辑"
+        }
+      },
+      "checks": [
+        {
+          "label": "实际模板能量收支",
+          "status": "通过本组筛查",
+          "detail": "最大闭合残差 0.05970%，门槛1%；含源作功、外流及适用的Q耗散。",
+          "report": "qc/cavity_closeout/acceptance.json",
+          "report_sha256": "8ca8584ce626752a190edef2f480d47372e79e4a7b35a0ced986652253cccaea"
+        },
+        {
+          "label": "实际模板平直壁牵引",
+          "status": "通过限定壁段筛查",
+          "detail": "四壁中段最坏相对RMS 0.45718%，门槛1%；分母为本例流体压力；固定排除距角点4m，不认证尖角。",
+          "report": "qc/cavity_closeout/acceptance.json",
+          "report_sha256": "8ca8584ce626752a190edef2f480d47372e79e4a7b35a0ced986652253cccaea"
+        },
+        {
+          "label": "实际模板法向速度连续性",
+          "status": "通过限定壁段筛查",
+          "detail": "四壁中段最坏相对RMS 0.05476%，门槛1%；相同角点排除范围。",
+          "report": "qc/cavity_closeout/acceptance.json",
+          "report_sha256": "8ca8584ce626752a190edef2f480d47372e79e4a7b35a0ced986652253cccaea"
+        },
+        {
+          "label": "尖角及邻域局部应力",
+          "status": "未认证",
+          "detail": "整边结果保留；主波形通过不等于尖角强式应力准确。本版不作为尖角应力计算工具。",
+          "report": "qc/cavity_closeout/acceptance.json",
+          "report_sha256": "8ca8584ce626752a190edef2f480d47372e79e4a7b35a0ced986652253cccaea"
+        },
+        {
+          "label": "运行方式",
+          "status": "限定串行",
+          "detail": "实际导出NPROC=1且运行前校验；MPI研究修补未替换产品后端，严格并行门槛仍有未通过项。",
+          "report": "qc/cavity_closeout/acceptance.json",
+          "report_sha256": "8ca8584ce626752a190edef2f480d47372e79e4a7b35a0ced986652253cccaea"
+        },
+        {
+          "label": "本域空间 h2→h1",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.23723%；Vz 0.11535%；pressure 0.50879%。门槛 1%；完整记录；细网格为分母",
+          "report": "qc/region_controls/report.json",
+          "report_sha256": "5ded455f4091bd0193ad5d22313e71108756a695ac812f9b8017960b6ca660de"
+        },
+        {
+          "label": "本域时间步减半",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.01649%；Vz 0.01714%；pressure 0.00629%。门槛 1%；完整记录；半dt为分母",
+          "report": "qc/region_controls/report.json",
+          "report_sha256": "5ded455f4091bd0193ad5d22313e71108756a695ac812f9b8017960b6ca660de"
+        },
+        {
+          "label": "外边界 480→640",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.03934%；Vz 0.01499%；pressure 0.17167%。门槛1%；完整记录，大域为分母。",
+          "report": "qc/region_phase4/boundary_followup/report.json",
+          "report_sha256": "ce715ca06ba4a8e8c01ace45671b427dd64116c651be0b847fcacb43b3872084"
+        },
+        {
+          "label": "独立P1有限洞体参考",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.32382%；Vz 0.25358%；pressure 0.51689%。门槛 1%；参考自身解析、网格和dt检查通过；完整记录，独立参考为分母",
+          "report": "qc/fluid_independent/report.json",
+          "report_sha256": "5c8a94c8dbbf20b84542af022dc46c7032c5f1260f75d7af47142cfb7e43e5fe"
+        },
+        {
+          "label": "实际双场后端回归",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.00000%；Vz 0.00000%；pressure 0.00000%。门槛 1e-08%；相同完整输入的双场与原双精度后端对照；仅本组回归",
+          "report": "qc/q_fluid_integration/report.json",
+          "report_sha256": "8fd39eae13e3754f8868d1d17bd1f23dcdaf73da66fd3171661b7a20400df15d"
+        }
+      ],
+      "backend_evidence": {
+        "report": "qc/q_fluid_integration/report.json",
+        "report_sha256": "8fd39eae13e3754f8868d1d17bd1f23dcdaf73da66fd3171661b7a20400df15d",
+        "key": "backend"
+      },
+      "limitation": "限本组材料、源/接收、矩形和0.6s积分；新写独立参考不是精确解或成熟第三方认证。双场仅完成相同基线输入回归，旧网格/dt/边界控制未声称全部在双场后端重跑；修改配置不自动继承。 当前交付限定串行、完整单炮速度/流体压力；尖角应力未认证。平直壁检查仅限所列中段。各观测量状态分开列出。"
+    },
+    {
+      "case_sha256": "9a61d840a7372dc55512c5dea09b3b745c77d128513928d86bb793943f8717ad",
+      "case": {
+        "schema": "rect_region_v1",
+        "model": {
+          "schema": 1,
+          "physics": "elastic",
+          "material_model": "isotropic",
+          "width_m": 480,
+          "layers": [
+            [
+              240,
+              1000,
+              500,
+              1800
+            ]
+          ],
+          "surface": [],
+          "interface_relief": [],
+          "shot_x_m": 180,
+          "shot_depth_m": 0,
+          "source_mode": "surface_force",
+          "f0_hz": 25,
+          "source_t0_s": 0.12,
+          "first_x_m": 200,
+          "spacing_m": 2,
+          "receivers": 51,
+          "receiver_depth_m": 0,
+          "element_m": 2,
+          "dt_s": 5e-05,
+          "nstep": 12000,
+          "sample_stride": 8,
+          "snapshot_stride": 600,
+          "boundary": "stacey",
+          "attenuation": {
+            "enabled": true,
+            "n_sls": 3,
+            "velocity_reference": "source_f0"
+          },
+          "material_properties": [
+            {
+              "qkappa": 100,
+              "qmu": 50
+            }
+          ]
+        },
+        "rectangle_m": [
+          228,
+          252,
+          -40,
+          -24
+        ],
+        "interior": {
+          "kind": "traction_free"
+        }
+      },
+      "checks": [
+        {
+          "label": "实际模板能量收支",
+          "status": "通过本组筛查",
+          "detail": "最大闭合残差 0.05801%，门槛1%；含源作功、外流及适用的Q耗散。",
+          "report": "qc/cavity_closeout/acceptance.json",
+          "report_sha256": "8ca8584ce626752a190edef2f480d47372e79e4a7b35a0ced986652253cccaea"
+        },
+        {
+          "label": "实际模板平直壁牵引",
+          "status": "通过限定壁段筛查",
+          "detail": "四壁中段最坏相对RMS 0.03974%，门槛1%；分母为本例固体应力；固定排除距角点4m，不认证尖角。",
+          "report": "qc/cavity_closeout/acceptance.json",
+          "report_sha256": "8ca8584ce626752a190edef2f480d47372e79e4a7b35a0ced986652253cccaea"
+        },
+        {
+          "label": "尖角及邻域局部应力",
+          "status": "未认证",
+          "detail": "整边结果保留；主波形通过不等于尖角强式应力准确。本版不作为尖角应力计算工具。",
+          "report": "qc/cavity_closeout/acceptance.json",
+          "report_sha256": "8ca8584ce626752a190edef2f480d47372e79e4a7b35a0ced986652253cccaea"
+        },
+        {
+          "label": "运行方式",
+          "status": "限定串行",
+          "detail": "实际导出NPROC=1且运行前校验；MPI研究修补未替换产品后端，严格并行门槛仍有未通过项。",
+          "report": "qc/cavity_closeout/acceptance.json",
+          "report_sha256": "8ca8584ce626752a190edef2f480d47372e79e4a7b35a0ced986652253cccaea"
+        },
+        {
+          "label": "本域空间 h2→h1",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.08091%；Vz 0.05590%。门槛 1%；完整记录；细网格为分母",
+          "report": "qc/region_controls/report.json",
+          "report_sha256": "5ded455f4091bd0193ad5d22313e71108756a695ac812f9b8017960b6ca660de"
+        },
+        {
+          "label": "本域时间步减半",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.01306%；Vz 0.01386%。门槛 1%；完整记录；半dt为分母",
+          "report": "qc/region_controls/report.json",
+          "report_sha256": "5ded455f4091bd0193ad5d22313e71108756a695ac812f9b8017960b6ca660de"
+        },
+        {
+          "label": "Q外边界 480→640",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.03992%；Vz 0.04461%。门槛 1%；完整记录；大域为分母",
+          "report": "qc/region_controls/report.json",
+          "report_sha256": "5ded455f4091bd0193ad5d22313e71108756a695ac812f9b8017960b6ca660de"
+        },
+        {
+          "label": "1.2s运行原时段一致性",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.00000%；Vz 0.00000%。门槛 1e-08%；只检验原0.6s记录前缀；长记录不构成边界/精度验收",
+          "report": "qc/region_controls/report.json",
+          "report_sha256": "5ded455f4091bd0193ad5d22313e71108756a695ac812f9b8017960b6ca660de"
+        },
+        {
+          "label": "独立P1有限Q洞体参考",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.19588%；Vz 0.19426%。门槛 1%；材料、算子、解析传播及参考自身网格/dt通过；完整记录，独立参考为分母",
+          "report": "qc/q_independent/report.json",
+          "report_sha256": "03d2506df04190f0ac7347bbee71717356f281ceb1e741afbd58831978785caf"
+        }
+      ],
+      "backend_evidence": {
+        "report": "qc/region_controls/report.json",
+        "report_sha256": "5ded455f4091bd0193ad5d22313e71108756a695ac812f9b8017960b6ca660de",
+        "key": "backend"
+      },
+      "limitation": "限本组材料、源/接收、矩形和0.6s积分；新写独立参考不是精确解或成熟第三方认证。双场仅完成相同基线输入回归，旧网格/dt/边界控制未声称全部在双场后端重跑；修改配置不自动继承。 当前交付限定串行、完整单炮速度/流体压力；尖角应力未认证。平直壁检查仅限所列中段。各观测量状态分开列出。"
+    },
+    {
+      "case_sha256": "4f87204681e6c193ecff970be3a16b00fc97f1757e27e503647337e404180754",
+      "case": {
+        "schema": "rect_region_v1",
+        "model": {
+          "schema": 1,
+          "physics": "elastic",
+          "material_model": "isotropic",
+          "width_m": 480,
+          "layers": [
+            [
+              240,
+              1000,
+              500,
+              1800
+            ]
+          ],
+          "surface": [],
+          "interface_relief": [],
+          "shot_x_m": 180,
+          "shot_depth_m": 0,
+          "source_mode": "surface_force",
+          "f0_hz": 25,
+          "source_t0_s": 0.12,
+          "first_x_m": 200,
+          "spacing_m": 2,
+          "receivers": 51,
+          "receiver_depth_m": 0,
+          "element_m": 2,
+          "dt_s": 5e-05,
+          "nstep": 12000,
+          "sample_stride": 8,
+          "snapshot_stride": 600,
+          "boundary": "stacey",
+          "attenuation": {
+            "enabled": true,
+            "n_sls": 3,
+            "velocity_reference": "source_f0"
+          },
+          "material_properties": [
+            {
+              "qkappa": 100,
+              "qmu": 50
+            }
+          ]
+        },
+        "rectangle_m": [
+          228,
+          252,
+          -40,
+          -24
+        ],
+        "interior": {
+          "kind": "fluid",
+          "name": "空气候选",
+          "rho_kg_m3": 1.2,
+          "sound_speed_m_s": 343.0,
+          "reference": "约20°C常压；用户应按实际条件编辑"
+        }
+      },
+      "checks": [
+        {
+          "label": "实际模板能量收支",
+          "status": "通过本组筛查",
+          "detail": "最大闭合残差 0.05801%，门槛1%；含源作功、外流及适用的Q耗散。",
+          "report": "qc/cavity_closeout/acceptance.json",
+          "report_sha256": "8ca8584ce626752a190edef2f480d47372e79e4a7b35a0ced986652253cccaea"
+        },
+        {
+          "label": "实际模板平直壁牵引",
+          "status": "未通过",
+          "detail": "四壁中段最坏相对RMS 29.78401%，门槛1%；分母为本例流体压力；固定排除距角点4m，不认证尖角。",
+          "report": "qc/cavity_closeout/acceptance.json",
+          "report_sha256": "8ca8584ce626752a190edef2f480d47372e79e4a7b35a0ced986652253cccaea"
+        },
+        {
+          "label": "实际模板法向速度连续性",
+          "status": "通过限定壁段筛查",
+          "detail": "四壁中段最坏相对RMS 0.89575%，门槛1%；相同角点排除范围。",
+          "report": "qc/cavity_closeout/acceptance.json",
+          "report_sha256": "8ca8584ce626752a190edef2f480d47372e79e4a7b35a0ced986652253cccaea"
+        },
+        {
+          "label": "尖角及邻域局部应力",
+          "status": "未认证",
+          "detail": "整边结果保留；主波形通过不等于尖角强式应力准确。本版不作为尖角应力计算工具。",
+          "report": "qc/cavity_closeout/acceptance.json",
+          "report_sha256": "8ca8584ce626752a190edef2f480d47372e79e4a7b35a0ced986652253cccaea"
+        },
+        {
+          "label": "运行方式",
+          "status": "限定串行",
+          "detail": "实际导出NPROC=1且运行前校验；MPI研究修补未替换产品后端，严格并行门槛仍有未通过项。",
+          "report": "qc/cavity_closeout/acceptance.json",
+          "report_sha256": "8ca8584ce626752a190edef2f480d47372e79e4a7b35a0ced986652253cccaea"
+        },
+        {
+          "label": "空间 h2→h1",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.08079%；Vz 0.05582%；pressure 0.18136%。门槛 1%；完整记录；对应细网格、半dt或大域为分母",
+          "report": "qc/q_fluid_convergence/report.json",
+          "report_sha256": "1f79b80f69d0bf503a9c860ecd5f30061dad5f0557a08a7626a115ba848d9e5e"
+        },
+        {
+          "label": "时间步减半",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.01306%；Vz 0.01386%；pressure 0.01726%。门槛 1%；完整记录；对应细网格、半dt或大域为分母",
+          "report": "qc/q_fluid_convergence/report.json",
+          "report_sha256": "1f79b80f69d0bf503a9c860ecd5f30061dad5f0557a08a7626a115ba848d9e5e"
+        },
+        {
+          "label": "外边界 480→640",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.03992%；Vz 0.04461%；pressure 0.04199%。门槛 1%；完整记录；对应细网格、半dt或大域为分母",
+          "report": "qc/q_fluid_convergence/report.json",
+          "report_sha256": "1f79b80f69d0bf503a9c860ecd5f30061dad5f0557a08a7626a115ba848d9e5e"
+        },
+        {
+          "label": "独立P1有限Q声固参考",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.19584%；Vz 0.19423%；pressure 0.33410%。门槛 1%；材料、算子、解析传播及参考自身网格/dt通过；各完整记录，独立参考为分母",
+          "report": "qc/q_independent/report.json",
+          "report_sha256": "03d2506df04190f0ac7347bbee71717356f281ceb1e741afbd58831978785caf"
+        }
+      ],
+      "backend_evidence": {
+        "report": "qc/q_fluid_convergence/report.json",
+        "report_sha256": "1f79b80f69d0bf503a9c860ecd5f30061dad5f0557a08a7626a115ba848d9e5e",
+        "key": "backend"
+      },
+      "limitation": "限本组Qκ100/Qμ50、N_SLS3、source_f0、单矩形空气/水洞及0.6s积分。流体无黏且无声学Q；不认证更长时段或其他几何。原生数值控制与独立参考分别登记，修改参数不继承。 当前交付限定串行、完整单炮速度/流体压力；尖角应力未认证。本模板平直壁牵引检查未通过。各观测量状态分开列出。"
+    },
+    {
+      "case_sha256": "b0dd4b4c2f60d4fec271c9b7b7f5e017d4109bfc311e52fc0e185fce0dbfcb0d",
+      "case": {
+        "schema": "rect_region_v1",
+        "model": {
+          "schema": 1,
+          "physics": "elastic",
+          "material_model": "isotropic",
+          "width_m": 480,
+          "layers": [
+            [
+              240,
+              1000,
+              500,
+              1800
+            ]
+          ],
+          "surface": [],
+          "interface_relief": [],
+          "shot_x_m": 180,
+          "shot_depth_m": 0,
+          "source_mode": "surface_force",
+          "f0_hz": 25,
+          "source_t0_s": 0.12,
+          "first_x_m": 200,
+          "spacing_m": 2,
+          "receivers": 51,
+          "receiver_depth_m": 0,
+          "element_m": 2,
+          "dt_s": 5e-05,
+          "nstep": 12000,
+          "sample_stride": 8,
+          "snapshot_stride": 600,
+          "boundary": "stacey",
+          "attenuation": {
+            "enabled": true,
+            "n_sls": 3,
+            "velocity_reference": "source_f0"
+          },
+          "material_properties": [
+            {
+              "qkappa": 100,
+              "qmu": 50
+            }
+          ]
+        },
+        "rectangle_m": [
+          228,
+          252,
+          -40,
+          -24
+        ],
+        "interior": {
+          "kind": "fluid",
+          "name": "清水候选",
+          "rho_kg_m3": 998.0,
+          "sound_speed_m_s": 1482.0,
+          "reference": "约20°C；用户应按实际条件编辑"
+        }
+      },
+      "checks": [
+        {
+          "label": "实际模板能量收支",
+          "status": "通过本组筛查",
+          "detail": "最大闭合残差 0.05801%，门槛1%；含源作功、外流及适用的Q耗散。",
+          "report": "qc/cavity_closeout/acceptance.json",
+          "report_sha256": "8ca8584ce626752a190edef2f480d47372e79e4a7b35a0ced986652253cccaea"
+        },
+        {
+          "label": "实际模板平直壁牵引",
+          "status": "通过限定壁段筛查",
+          "detail": "四壁中段最坏相对RMS 0.36259%，门槛1%；分母为本例流体压力；固定排除距角点4m，不认证尖角。",
+          "report": "qc/cavity_closeout/acceptance.json",
+          "report_sha256": "8ca8584ce626752a190edef2f480d47372e79e4a7b35a0ced986652253cccaea"
+        },
+        {
+          "label": "实际模板法向速度连续性",
+          "status": "通过限定壁段筛查",
+          "detail": "四壁中段最坏相对RMS 0.04647%，门槛1%；相同角点排除范围。",
+          "report": "qc/cavity_closeout/acceptance.json",
+          "report_sha256": "8ca8584ce626752a190edef2f480d47372e79e4a7b35a0ced986652253cccaea"
+        },
+        {
+          "label": "尖角及邻域局部应力",
+          "status": "未认证",
+          "detail": "整边结果保留；主波形通过不等于尖角强式应力准确。本版不作为尖角应力计算工具。",
+          "report": "qc/cavity_closeout/acceptance.json",
+          "report_sha256": "8ca8584ce626752a190edef2f480d47372e79e4a7b35a0ced986652253cccaea"
+        },
+        {
+          "label": "运行方式",
+          "status": "限定串行",
+          "detail": "实际导出NPROC=1且运行前校验；MPI研究修补未替换产品后端，严格并行门槛仍有未通过项。",
+          "report": "qc/cavity_closeout/acceptance.json",
+          "report_sha256": "8ca8584ce626752a190edef2f480d47372e79e4a7b35a0ced986652253cccaea"
+        },
+        {
+          "label": "空间 h2→h1",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.19482%；Vz 0.10073%；pressure 0.40079%。门槛 1%；完整记录；对应细网格、半dt或大域为分母",
+          "report": "qc/q_fluid_convergence/report.json",
+          "report_sha256": "1f79b80f69d0bf503a9c860ecd5f30061dad5f0557a08a7626a115ba848d9e5e"
+        },
+        {
+          "label": "时间步减半",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.01323%；Vz 0.01403%；pressure 0.00571%。门槛 1%；完整记录；对应细网格、半dt或大域为分母",
+          "report": "qc/q_fluid_convergence/report.json",
+          "report_sha256": "1f79b80f69d0bf503a9c860ecd5f30061dad5f0557a08a7626a115ba848d9e5e"
+        },
+        {
+          "label": "外边界 480→640",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.04469%；Vz 0.05497%；pressure 0.42098%。门槛 1%；完整记录；对应细网格、半dt或大域为分母",
+          "report": "qc/q_fluid_convergence/report.json",
+          "report_sha256": "1f79b80f69d0bf503a9c860ecd5f30061dad5f0557a08a7626a115ba848d9e5e"
+        },
+        {
+          "label": "独立P1有限Q声固参考",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.26562%；Vz 0.21100%；pressure 0.40412%。门槛 1%；材料、算子、解析传播及参考自身网格/dt通过；各完整记录，独立参考为分母",
+          "report": "qc/q_independent/report.json",
+          "report_sha256": "03d2506df04190f0ac7347bbee71717356f281ceb1e741afbd58831978785caf"
+        }
+      ],
+      "backend_evidence": {
+        "report": "qc/q_fluid_convergence/report.json",
+        "report_sha256": "1f79b80f69d0bf503a9c860ecd5f30061dad5f0557a08a7626a115ba848d9e5e",
+        "key": "backend"
+      },
+      "limitation": "限本组Qκ100/Qμ50、N_SLS3、source_f0、单矩形空气/水洞及0.6s积分。流体无黏且无声学Q；不认证更长时段或其他几何。原生数值控制与独立参考分别登记，修改参数不继承。 当前交付限定串行、完整单炮速度/流体压力；尖角应力未认证。平直壁检查仅限所列中段。各观测量状态分开列出。"
+    },
+    {
+      "case_sha256": "81382904633573ed95273fddc657bcc14a01cee26f2af7ae1eee6cec8fb4693f",
+      "case": {
+        "schema": "region_geometry_v1",
+        "model": {
+          "schema": 1,
+          "physics": "elastic",
+          "material_model": "isotropic",
+          "width_m": 480,
+          "layers": [
+            [
+              240,
+              1000,
+              500,
+              1800
+            ]
+          ],
+          "surface": [],
+          "interface_relief": [],
+          "shot_x_m": 180,
+          "shot_depth_m": 0,
+          "source_mode": "surface_force",
+          "f0_hz": 25,
+          "source_t0_s": 0.12,
+          "first_x_m": 200,
+          "spacing_m": 2,
+          "receivers": 51,
+          "receiver_depth_m": 0,
+          "element_m": 2,
+          "dt_s": 2.5e-05,
+          "nstep": 24000,
+          "sample_stride": 16,
+          "snapshot_stride": 1200,
+          "boundary": "stacey"
+        },
+        "regions": [
+          {
+            "id": "r1",
+            "shape": {
+              "kind": "circle",
+              "center_m": [
+                240,
+                -40
+              ],
+              "radius_m": 8,
+              "patch_halfwidth_m": 10
+            },
+            "interior": {
+              "kind": "traction_free"
+            }
+          }
+        ],
+        "surface_warp_depth_m": null
+      },
+      "checks": [
+        {
+          "label": "空间 h2→h1",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.15850%；Vz 0.08817%。门槛 1%；完整记录；细网格为分母",
+          "report": "qc/geometry/controls/report.json",
+          "report_sha256": "b37c045955c41a27f2c0563c91e01cd50ac7675ff9ef2adc03741a6dbb05d6b5"
+        },
+        {
+          "label": "时间步减半",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.00413%；Vz 0.00428%。门槛 1%；完整记录；对应半dt或大域为分母",
+          "report": "qc/geometry/controls/report.json",
+          "report_sha256": "b37c045955c41a27f2c0563c91e01cd50ac7675ff9ef2adc03741a6dbb05d6b5"
+        },
+        {
+          "label": "外边界 480→640",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.03582%；Vz 0.01416%。门槛 1%；完整记录；对应半dt或大域为分母",
+          "report": "qc/geometry/controls/report.json",
+          "report_sha256": "b37c045955c41a27f2c0563c91e01cd50ac7675ff9ef2adc03741a6dbb05d6b5"
+        },
+        {
+          "label": "曲边Q9自身加密",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.00136%；Vz 0.00375%。门槛 1%；同一原生求解器的另一种几何表示；不是独立代码参考",
+          "report": "qc/geometry/curved/report.json",
+          "report_sha256": "1d3aa59782a18045e5562fb253fe85710338cd7a19f0084427671c342c097499"
+        },
+        {
+          "label": "细网格Q4/Q9几何交叉对照",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.05323%；Vz 0.02934%。门槛 1%；干洞dt也有差异；这是几何/数值联合筛查，不是纯几何误差或精确圆解",
+          "report": "qc/geometry/curved/report.json",
+          "report_sha256": "1d3aa59782a18045e5562fb253fe85710338cd7a19f0084427671c342c097499"
+        }
+      ],
+      "backend_evidence": {
+        "report": "qc/geometry/controls/report.json",
+        "report_sha256": "b37c045955c41a27f2c0563c91e01cd50ac7675ff9ef2adc03741a6dbb05d6b5",
+        "key": "backend"
+      },
+      "limitation": "限本组单层无损ISO、显式形状/材料/地表、Stacey及0.6s积分。圆边界为内接Q4多边形；曲边Q9交叉对照仍使用同一求解器，不称独立有限圆洞参考。 不包含Q/TI或任意组合；修改参数不继承。 保留原有几何验证等级；本轮未新增几何认证，运行限定串行。"
+    },
+    {
+      "case_sha256": "8873a89b399eed9925c93d070ba8754ee88d00440686b40b9121a2217c578f47",
+      "case": {
+        "schema": "region_geometry_v1",
+        "model": {
+          "schema": 1,
+          "physics": "elastic",
+          "material_model": "isotropic",
+          "width_m": 480,
+          "layers": [
+            [
+              240,
+              1000,
+              500,
+              1800
+            ]
+          ],
+          "surface": [],
+          "interface_relief": [],
+          "shot_x_m": 180,
+          "shot_depth_m": 0,
+          "source_mode": "surface_force",
+          "f0_hz": 25,
+          "source_t0_s": 0.12,
+          "first_x_m": 200,
+          "spacing_m": 2,
+          "receivers": 51,
+          "receiver_depth_m": 0,
+          "element_m": 2,
+          "dt_s": 2.5e-05,
+          "nstep": 24000,
+          "sample_stride": 16,
+          "snapshot_stride": 1200,
+          "boundary": "stacey"
+        },
+        "regions": [
+          {
+            "id": "r1",
+            "shape": {
+              "kind": "circle",
+              "center_m": [
+                240,
+                -40
+              ],
+              "radius_m": 8,
+              "patch_halfwidth_m": 10
+            },
+            "interior": {
+              "kind": "fluid",
+              "name": "清水候选",
+              "rho_kg_m3": 998.0,
+              "sound_speed_m_s": 1482.0,
+              "reference": "约20°C；用户应按实际条件编辑"
+            }
+          }
+        ],
+        "surface_warp_depth_m": null
+      },
+      "checks": [
+        {
+          "label": "空间 h2→h1（共同dt20μs）",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.19503%；Vz 0.08326%；pressure 0.14381%。门槛 1%；原h1/dt25μs失败保留；空间对照显式使用共同dt20μs；并非原失败运行通过",
+          "report": "qc/geometry/controls/report.json",
+          "report_sha256": "b37c045955c41a27f2c0563c91e01cd50ac7675ff9ef2adc03741a6dbb05d6b5"
+        },
+        {
+          "label": "时间步减半",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.00416%；Vz 0.00431%；pressure 0.00140%；pressure_1 0.00140%。门槛 1%；完整记录；对应半dt或大域为分母",
+          "report": "qc/geometry/controls/report.json",
+          "report_sha256": "b37c045955c41a27f2c0563c91e01cd50ac7675ff9ef2adc03741a6dbb05d6b5"
+        },
+        {
+          "label": "外边界 480→640",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.03645%；Vz 0.01340%；pressure 0.19566%；pressure_1 0.19566%。门槛 1%；完整记录；对应半dt或大域为分母",
+          "report": "qc/geometry/controls/report.json",
+          "report_sha256": "b37c045955c41a27f2c0563c91e01cd50ac7675ff9ef2adc03741a6dbb05d6b5"
+        },
+        {
+          "label": "曲边Q9自身加密",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.00135%；Vz 0.00374%；pressure 0.00010%。门槛 1%；同一原生求解器的另一种几何表示；不是独立代码参考",
+          "report": "qc/geometry/curved/report.json",
+          "report_sha256": "1d3aa59782a18045e5562fb253fe85710338cd7a19f0084427671c342c097499"
+        },
+        {
+          "label": "细网格Q4/Q9几何交叉对照",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.06533%；Vz 0.02784%；pressure 0.04860%。门槛 1%；干洞dt也有差异；这是几何/数值联合筛查，不是纯几何误差或精确圆解",
+          "report": "qc/geometry/curved/report.json",
+          "report_sha256": "1d3aa59782a18045e5562fb253fe85710338cd7a19f0084427671c342c097499"
+        }
+      ],
+      "backend_evidence": {
+        "report": "qc/geometry/controls/report.json",
+        "report_sha256": "b37c045955c41a27f2c0563c91e01cd50ac7675ff9ef2adc03741a6dbb05d6b5",
+        "key": "backend"
+      },
+      "limitation": "限本组单层无损ISO、显式形状/材料/地表、Stacey及0.6s积分。圆边界为内接Q4多边形；曲边Q9交叉对照仍使用同一求解器，不称独立有限圆洞参考。 不包含Q/TI或任意组合；修改参数不继承。 保留原有几何验证等级；本轮未新增几何认证，运行限定串行。"
+    },
+    {
+      "case_sha256": "cf03a1b120f7b3c601d618f9d7abe2cc08e583ace7bf2806d52e7abd1d55bf47",
+      "case": {
+        "schema": "region_geometry_v1",
+        "model": {
+          "schema": 1,
+          "physics": "elastic",
+          "material_model": "isotropic",
+          "width_m": 480,
+          "layers": [
+            [
+              240,
+              1000,
+              500,
+              1800
+            ]
+          ],
+          "surface": [],
+          "interface_relief": [],
+          "shot_x_m": 180,
+          "shot_depth_m": 0,
+          "source_mode": "surface_force",
+          "f0_hz": 25,
+          "source_t0_s": 0.12,
+          "first_x_m": 200,
+          "spacing_m": 2,
+          "receivers": 51,
+          "receiver_depth_m": 0,
+          "element_m": 2,
+          "dt_s": 2.5e-05,
+          "nstep": 24000,
+          "sample_stride": 16,
+          "snapshot_stride": 1200,
+          "boundary": "stacey"
+        },
+        "regions": [
+          {
+            "id": "left",
+            "shape": {
+              "kind": "rectangle",
+              "bounds_m": [
+                220,
+                236,
+                -40,
+                -24
+              ]
+            },
+            "interior": {
+              "kind": "traction_free"
+            }
+          },
+          {
+            "id": "right",
+            "shape": {
+              "kind": "rectangle",
+              "bounds_m": [
+                252,
+                268,
+                -48,
+                -32
+              ]
+            },
+            "interior": {
+              "kind": "traction_free"
+            }
+          }
+        ],
+        "surface_warp_depth_m": null
+      },
+      "checks": [
+        {
+          "label": "空间 h2→h1",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.19424%；Vz 0.10492%。门槛 1%；完整记录；细网格为分母",
+          "report": "qc/geometry/controls/report.json",
+          "report_sha256": "b37c045955c41a27f2c0563c91e01cd50ac7675ff9ef2adc03741a6dbb05d6b5"
+        },
+        {
+          "label": "时间步减半",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.00405%；Vz 0.00429%。门槛 1%；完整记录；对应半dt或大域为分母",
+          "report": "qc/geometry/controls/report.json",
+          "report_sha256": "b37c045955c41a27f2c0563c91e01cd50ac7675ff9ef2adc03741a6dbb05d6b5"
+        },
+        {
+          "label": "外边界 480→640",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.03135%；Vz 0.01436%。门槛 1%；完整记录；对应半dt或大域为分母",
+          "report": "qc/geometry/controls/report.json",
+          "report_sha256": "b37c045955c41a27f2c0563c91e01cd50ac7675ff9ef2adc03741a6dbb05d6b5"
+        },
+        {
+          "label": "独立P1有限几何参考",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.30232%；Vz 0.26365%。门槛 1%；参考自身算子、网格/dt通过；各流体压力分别检查，完整参考为分母",
+          "report": "qc/geometry/independent/report.json",
+          "report_sha256": "ca9fa5b37575d86eaeaa28abff8546c40b332153cf24b3db9297b197811d1868"
+        }
+      ],
+      "backend_evidence": {
+        "report": "qc/geometry/controls/report.json",
+        "report_sha256": "b37c045955c41a27f2c0563c91e01cd50ac7675ff9ef2adc03741a6dbb05d6b5",
+        "key": "backend"
+      },
+      "limitation": "限本组单层无损ISO、显式形状/材料/地表、Stacey及0.6s积分。独立P1为本项目新写实现，不是精确解或成熟第三方软件认证。 不包含Q/TI或任意组合；修改参数不继承。 保留原有几何验证等级；本轮未新增几何认证，运行限定串行。"
+    },
+    {
+      "case_sha256": "29d66fcb09f75bdc3fd03c9effca19d3d96afe132131ec2ee1d5b067f171a821",
+      "case": {
+        "schema": "region_geometry_v1",
+        "model": {
+          "schema": 1,
+          "physics": "elastic",
+          "material_model": "isotropic",
+          "width_m": 480,
+          "layers": [
+            [
+              240,
+              1000,
+              500,
+              1800
+            ]
+          ],
+          "surface": [],
+          "interface_relief": [],
+          "shot_x_m": 180,
+          "shot_depth_m": 0,
+          "source_mode": "surface_force",
+          "f0_hz": 25,
+          "source_t0_s": 0.12,
+          "first_x_m": 200,
+          "spacing_m": 2,
+          "receivers": 51,
+          "receiver_depth_m": 0,
+          "element_m": 2,
+          "dt_s": 2.5e-05,
+          "nstep": 24000,
+          "sample_stride": 16,
+          "snapshot_stride": 1200,
+          "boundary": "stacey"
+        },
+        "regions": [
+          {
+            "id": "left",
+            "shape": {
+              "kind": "rectangle",
+              "bounds_m": [
+                220,
+                236,
+                -40,
+                -24
+              ]
+            },
+            "interior": {
+              "kind": "fluid",
+              "name": "空气候选",
+              "rho_kg_m3": 1.2,
+              "sound_speed_m_s": 343.0,
+              "reference": "约20°C常压；用户应按实际条件编辑"
+            }
+          },
+          {
+            "id": "right",
+            "shape": {
+              "kind": "rectangle",
+              "bounds_m": [
+                252,
+                268,
+                -48,
+                -32
+              ]
+            },
+            "interior": {
+              "kind": "fluid",
+              "name": "清水候选",
+              "rho_kg_m3": 998.0,
+              "sound_speed_m_s": 1482.0,
+              "reference": "约20°C；用户应按实际条件编辑"
+            }
+          }
+        ],
+        "surface_warp_depth_m": null
+      },
+      "checks": [
+        {
+          "label": "空间 h2→h1",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.20627%；Vz 0.10214%；pressure 0.81052%；pressure_1 0.56870%；pressure_2 0.81054%。门槛 1%；完整记录；细网格为分母",
+          "report": "qc/geometry/controls/report.json",
+          "report_sha256": "b37c045955c41a27f2c0563c91e01cd50ac7675ff9ef2adc03741a6dbb05d6b5"
+        },
+        {
+          "label": "时间步减半",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.00404%；Vz 0.00428%；pressure 0.00319%；pressure_1 0.00704%；pressure_2 0.00319%。门槛 1%；完整记录；对应半dt或大域为分母",
+          "report": "qc/geometry/controls/report.json",
+          "report_sha256": "b37c045955c41a27f2c0563c91e01cd50ac7675ff9ef2adc03741a6dbb05d6b5"
+        },
+        {
+          "label": "外边界 480→640",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.03133%；Vz 0.01423%；pressure 0.22491%；pressure_1 0.03474%；pressure_2 0.22492%。门槛 1%；完整记录；对应半dt或大域为分母",
+          "report": "qc/geometry/controls/report.json",
+          "report_sha256": "b37c045955c41a27f2c0563c91e01cd50ac7675ff9ef2adc03741a6dbb05d6b5"
+        },
+        {
+          "label": "独立P1有限几何参考",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.29123%；Vz 0.19738%；pressure_1 0.66906%；pressure_2 0.99566%。门槛 1%；参考自身算子、网格/dt通过；各流体压力分别检查，完整参考为分母",
+          "report": "qc/geometry/independent/report.json",
+          "report_sha256": "ca9fa5b37575d86eaeaa28abff8546c40b332153cf24b3db9297b197811d1868"
+        }
+      ],
+      "backend_evidence": {
+        "report": "qc/geometry/controls/report.json",
+        "report_sha256": "b37c045955c41a27f2c0563c91e01cd50ac7675ff9ef2adc03741a6dbb05d6b5",
+        "key": "backend"
+      },
+      "limitation": "限本组单层无损ISO、显式形状/材料/地表、Stacey及0.6s积分。独立P1为本项目新写实现，不是精确解或成熟第三方软件认证。 不包含Q/TI或任意组合；修改参数不继承。 保留原有几何验证等级；本轮未新增几何认证，运行限定串行。"
+    },
+    {
+      "case_sha256": "72ca8182935ede817d02eb723dd163bf6c84ccecbb23c68766cfab628da07fa1",
+      "case": {
+        "schema": "region_geometry_v1",
+        "model": {
+          "schema": 1,
+          "physics": "elastic",
+          "material_model": "isotropic",
+          "width_m": 480,
+          "layers": [
+            [
+              240,
+              1000,
+              500,
+              1800
+            ]
+          ],
+          "surface": [
+            [
+              0,
+              0
+            ],
+            [
+              120,
+              0
+            ],
+            [
+              240,
+              6
+            ],
+            [
+              360,
+              0
+            ],
+            [
+              480,
+              0
+            ]
+          ],
+          "interface_relief": [],
+          "shot_x_m": 180,
+          "shot_depth_m": 0,
+          "source_mode": "surface_force",
+          "f0_hz": 25,
+          "source_t0_s": 0.12,
+          "first_x_m": 200,
+          "spacing_m": 2,
+          "receivers": 51,
+          "receiver_depth_m": 0,
+          "element_m": 2,
+          "dt_s": 2.5e-05,
+          "nstep": 24000,
+          "sample_stride": 16,
+          "snapshot_stride": 1200,
+          "boundary": "stacey"
+        },
+        "regions": [
+          {
+            "id": "r1",
+            "shape": {
+              "kind": "rectangle",
+              "bounds_m": [
+                228,
+                252,
+                -40,
+                -24
+              ]
+            },
+            "interior": {
+              "kind": "traction_free"
+            }
+          }
+        ],
+        "surface_warp_depth_m": 20,
+        "surface_interpolation": "linear"
+      },
+      "checks": [
+        {
+          "label": "空间 h2→h1",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.12945%；Vz 0.06025%。门槛 1%；完整记录；细网格为分母",
+          "report": "qc/geometry/controls/report.json",
+          "report_sha256": "b37c045955c41a27f2c0563c91e01cd50ac7675ff9ef2adc03741a6dbb05d6b5"
+        },
+        {
+          "label": "时间步减半",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.00402%；Vz 0.00412%。门槛 1%；完整记录；对应半dt或大域为分母",
+          "report": "qc/geometry/controls/report.json",
+          "report_sha256": "b37c045955c41a27f2c0563c91e01cd50ac7675ff9ef2adc03741a6dbb05d6b5"
+        },
+        {
+          "label": "外边界 480→640",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.03501%；Vz 0.01484%。门槛 1%；完整记录；对应半dt或大域为分母",
+          "report": "qc/geometry/controls/report.json",
+          "report_sha256": "b37c045955c41a27f2c0563c91e01cd50ac7675ff9ef2adc03741a6dbb05d6b5"
+        },
+        {
+          "label": "独立P1有限几何参考",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.28104%；Vz 0.25150%。门槛 1%；参考自身算子、网格/dt通过；各流体压力分别检查，完整参考为分母",
+          "report": "qc/geometry/independent/report.json",
+          "report_sha256": "ca9fa5b37575d86eaeaa28abff8546c40b332153cf24b3db9297b197811d1868"
+        }
+      ],
+      "backend_evidence": {
+        "report": "qc/geometry/controls/report.json",
+        "report_sha256": "b37c045955c41a27f2c0563c91e01cd50ac7675ff9ef2adc03741a6dbb05d6b5",
+        "key": "backend"
+      },
+      "limitation": "限本组单层无损ISO、显式形状/材料/地表、Stacey及0.6s积分。独立P1为本项目新写实现，不是精确解或成熟第三方软件认证。 不包含Q/TI或任意组合；修改参数不继承。 保留原有几何验证等级；本轮未新增几何认证，运行限定串行。"
+    },
+    {
+      "case_sha256": "89d2b87cdacd95d93f944071833738d21c480970bdb65a18f1fe8a6a422be748",
+      "case": {
+        "schema": "region_geometry_v1",
+        "model": {
+          "schema": 1,
+          "physics": "elastic",
+          "material_model": "isotropic",
+          "width_m": 480,
+          "layers": [
+            [
+              240,
+              1000,
+              500,
+              1800
+            ]
+          ],
+          "surface": [
+            [
+              0,
+              0
+            ],
+            [
+              120,
+              0
+            ],
+            [
+              240,
+              6
+            ],
+            [
+              360,
+              0
+            ],
+            [
+              480,
+              0
+            ]
+          ],
+          "interface_relief": [],
+          "shot_x_m": 180,
+          "shot_depth_m": 0,
+          "source_mode": "surface_force",
+          "f0_hz": 25,
+          "source_t0_s": 0.12,
+          "first_x_m": 200,
+          "spacing_m": 2,
+          "receivers": 51,
+          "receiver_depth_m": 0,
+          "element_m": 2,
+          "dt_s": 2.5e-05,
+          "nstep": 24000,
+          "sample_stride": 16,
+          "snapshot_stride": 1200,
+          "boundary": "stacey"
+        },
+        "regions": [
+          {
+            "id": "r1",
+            "shape": {
+              "kind": "rectangle",
+              "bounds_m": [
+                228,
+                252,
+                -40,
+                -24
+              ]
+            },
+            "interior": {
+              "kind": "fluid",
+              "name": "清水候选",
+              "rho_kg_m3": 998.0,
+              "sound_speed_m_s": 1482.0,
+              "reference": "约20°C；用户应按实际条件编辑"
+            }
+          }
+        ],
+        "surface_warp_depth_m": 20,
+        "surface_interpolation": "linear"
+      },
+      "checks": [
+        {
+          "label": "空间 h2→h1",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.22039%；Vz 0.10180%；pressure 0.60067%；pressure_1 0.60067%。门槛 1%；完整记录；细网格为分母",
+          "report": "qc/geometry/controls/report.json",
+          "report_sha256": "b37c045955c41a27f2c0563c91e01cd50ac7675ff9ef2adc03741a6dbb05d6b5"
+        },
+        {
+          "label": "时间步减半",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.00411%；Vz 0.00420%；pressure 0.00177%；pressure_1 0.00177%。门槛 1%；完整记录；对应半dt或大域为分母",
+          "report": "qc/geometry/controls/report.json",
+          "report_sha256": "b37c045955c41a27f2c0563c91e01cd50ac7675ff9ef2adc03741a6dbb05d6b5"
+        },
+        {
+          "label": "外边界 480→640",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.03933%；Vz 0.01542%；pressure 0.17206%；pressure_1 0.17206%。门槛 1%；完整记录；对应半dt或大域为分母",
+          "report": "qc/geometry/controls/report.json",
+          "report_sha256": "b37c045955c41a27f2c0563c91e01cd50ac7675ff9ef2adc03741a6dbb05d6b5"
+        },
+        {
+          "label": "独立P1有限几何参考",
+          "status": "通过本组筛查",
+          "detail": "Vx 0.35091%；Vz 0.26993%；pressure_1 0.73349%。门槛 1%；参考自身算子、网格/dt通过；各流体压力分别检查，完整参考为分母",
+          "report": "qc/geometry/independent/report.json",
+          "report_sha256": "ca9fa5b37575d86eaeaa28abff8546c40b332153cf24b3db9297b197811d1868"
+        }
+      ],
+      "backend_evidence": {
+        "report": "qc/geometry/controls/report.json",
+        "report_sha256": "b37c045955c41a27f2c0563c91e01cd50ac7675ff9ef2adc03741a6dbb05d6b5",
+        "key": "backend"
+      },
+      "limitation": "限本组单层无损ISO、显式形状/材料/地表、Stacey及0.6s积分。独立P1为本项目新写实现，不是精确解或成熟第三方软件认证。 不包含Q/TI或任意组合；修改参数不继承。 保留原有几何验证等级；本轮未新增几何认证，运行限定串行。"
+    },
+    {
+      "case_sha256": "7eda3a731ad6dff7d0e995eb2d8519d339fb7b45af2a26ed6b172d7e145858d9",
+      "case": {
+        "schema": "rect_region_v1",
+        "model": {
+          "schema": 1,
+          "physics": "elastic",
+          "material_model": "isotropic",
+          "width_m": 480,
+          "layers": [
+            [
+              240,
+              1000,
+              500,
+              1800
+            ]
+          ],
+          "surface": [],
+          "interface_relief": [],
+          "shot_x_m": 180,
+          "shot_depth_m": 0,
+          "source_mode": "surface_force",
+          "f0_hz": 25,
+          "source_t0_s": 0.12,
+          "first_x_m": 200,
+          "spacing_m": 2,
+          "receivers": 51,
+          "receiver_depth_m": 0,
+          "element_m": 2,
+          "dt_s": 5e-05,
+          "nstep": 12000,
+          "sample_stride": 8,
+          "snapshot_stride": 600,
+          "boundary": "stacey"
+        },
+        "rectangle_m": [
+          228,
+          252,
+          -28,
+          -12
+        ],
+        "interior": {
+          "kind": "fluid",
+          "name": "空气候选",
+          "rho_kg_m3": 1.2,
+          "sound_speed_m_s": 343.0,
+          "reference": "约20°C常压；用户应按实际条件编辑"
+        }
+      },
+      "limitation": "洞顶12 m精确输入的时间步、空间及边界控制通过；独立参考、空气壁面及尖角应力未验收，不是全面科学认证。改变输入后不继承本记录。",
+      "backend_evidence": {
+        "report": "qc/cavity_depth_20261112/backend.json",
+        "report_sha256": "fb97ff6683abd4ca65bb986fe82c30d9028c21ec8f857a092a70d7462aeff68c",
+        "key": "air12"
+      },
+      "checks": [
+        {
+          "label": "完整波形与实际网格",
+          "status": "已计算，限定检查",
+          "detail": "28800个单元，正Jacobian；完整记录与保存原生场均有限。洞顶12 m、尺寸24×16 m、0.6 s。",
+          "report": "docs/cavity/DEPTH_STUDY_20261112_zh.md",
+          "report_sha256": "a268c9d0b6d214407bf630db2cf845e99956a09f474acccc59d9be64116ee9a6"
+        },
+        {
+          "label": "时间步减半",
+          "status": "通过本项",
+          "detail": "完整Vx/Vz变化0.015711%/0.016520%；PS/FH最坏频率0.017947%/0.017722%，均小于1%筛查。",
+          "report": "docs/cavity/DEPTH_STUDY_20261112_zh.md",
+          "report_sha256": "a268c9d0b6d214407bf630db2cf845e99956a09f474acccc59d9be64116ee9a6"
+        },
+        {
+          "label": "独立参考",
+          "status": "本几何未验收",
+          "detail": "本轮是同一求解器数值控制，不继承24 m埋深模板的独立参考结论。",
+          "report": "docs/cavity/DEPTH_CONTROLS_20261112_zh.md",
+          "report_sha256": "59d469c7d89a94eb66443870747ff072d82b1e50f4469d89de022034a25c888b"
+        },
+        {
+          "label": "空间网格2 m→1 m",
+          "status": "通过本项",
+          "detail": "完整Vx/Vz差0.2480%/0.1612%；洞体增量0.4261%/0.2931%；PS/FH最坏单频0.2115%/0.2564%。",
+          "report": "docs/cavity/DEPTH_CONTROLS_20261112_zh.md",
+          "report_sha256": "59d469c7d89a94eb66443870747ff072d82b1e50f4469d89de022034a25c888b"
+        },
+        {
+          "label": "外边界加远96 m",
+          "status": "通过本项",
+          "detail": "完整Vx/Vz差0.03650%/0.01414%；洞体增量0.02952%/0.02124%。窗内谱差接近舍入量级，完整记录晚到尾波差非零。",
+          "report": "docs/cavity/DEPTH_CONTROLS_20261112_zh.md",
+          "report_sha256": "59d469c7d89a94eb66443870747ff072d82b1e50f4469d89de022034a25c888b"
+        },
+        {
+          "label": "空气壁面及尖角应力",
+          "status": "未通过项保留",
+          "detail": "历史空气壁面牵引误差仍未解决；新几何未做壁面或尖角应力验收。",
+          "report": "docs/cavity/DEPTH_STUDY_20261112_zh.md",
+          "report_sha256": "a268c9d0b6d214407bf630db2cf845e99956a09f474acccc59d9be64116ee9a6"
+        }
+      ]
+    },
+    {
+      "case_sha256": "279bb82db04b39595bf5a08091e8994ac8f7845c5c2b389243f63af53c5a535b",
+      "case": {
+        "schema": "rect_region_v1",
+        "model": {
+          "schema": 1,
+          "physics": "elastic",
+          "material_model": "isotropic",
+          "width_m": 960,
+          "layers": [
+            [
+              440,
+              1000,
+              500,
+              1800
+            ]
+          ],
+          "surface": [],
+          "interface_relief": [],
+          "shot_x_m": 300,
+          "shot_depth_m": 0,
+          "source_mode": "surface_force",
+          "f0_hz": 25,
+          "source_t0_s": 0.12,
+          "first_x_m": 320,
+          "spacing_m": 2,
+          "receivers": 151,
+          "receiver_depth_m": 0,
+          "element_m": 2,
+          "dt_s": 5e-05,
+          "nstep": 24000,
+          "sample_stride": 8,
+          "snapshot_stride": 1200,
+          "boundary": "stacey"
+        },
+        "rectangle_m": [
+          348,
+          372,
+          -28,
+          -12
+        ],
+        "interior": {
+          "kind": "fluid",
+          "name": "空气候选",
+          "rho_kg_m3": 1.2,
+          "sound_speed_m_s": 343.0,
+          "reference": "约20°C常压；用户应按实际条件编辑"
+        }
+      },
+      "backend_evidence": {
+        "report": "qc/cavity_demo300_20261112/backend.json",
+        "report_sha256": "38408f2f602d54619c20d8c66568aeeb1cfacb79f74630289a6559e8e2e1a582",
+        "key": "active"
+      },
+      "checks": [
+        {
+          "label": "完整记录与较大域对照",
+          "status": "通过（本例范围）",
+          "detail": "完整1.2 s/151道/300 m，相对既有较大域Vx/Vz差0.1657%/0.0862%；最坏单道0.3828%。",
+          "report": "qc/cavity_demo300_20261112/report.json",
+          "report_sha256": "cde432ea13fe83920a7758808db61c978e0423f502051ba592d379e88122bd7d"
+        },
+        {
+          "label": "固定窗等权PS/FH与洞体增量",
+          "status": "通过（本例范围）",
+          "detail": "功率整图<1%、最坏逐频<3%，配对洞体波形增量<2%；原始条带保留。",
+          "report": "qc/cavity_demo300_20261112/report.json",
+          "report_sha256": "cde432ea13fe83920a7758808db61c978e0423f502051ba592d379e88122bd7d"
+        },
+        {
+          "label": "独立物理解及局部应力",
+          "status": "未验收",
+          "detail": "本新记录未另做网格/dt加密；未补齐独立空洞参考、空气壁面牵引与尖角应力；不继承其他几何的验收。原600 m/2 s案例仍有晚到返回。",
+          "report": "qc/cavity_demo300_20261112/report.json",
+          "report_sha256": "cde432ea13fe83920a7758808db61c978e0423f502051ba592d379e88122bd7d"
+        }
+      ],
+      "limitation": "本项为300 m/1.2 s完整波形与较大域对照；不是600 m/2 s问题的修复，也不是任意空洞/应力的精度证书。"
+    },
+    {
+      "case": {
+        "schema": "region_geometry_v1",
+        "model": {
+          "schema": 1,
+          "physics": "elastic",
+          "material_model": "isotropic",
+          "width_m": 420,
+          "layers": [
+            [
+              220,
+              1000,
+              500,
+              1800
+            ]
+          ],
+          "surface": [],
+          "interface_relief": [],
+          "shot_x_m": 130,
+          "shot_depth_m": 0,
+          "source_mode": "surface_force",
+          "f0_hz": 25,
+          "source_t0_s": 0.12,
+          "first_x_m": 138,
+          "spacing_m": 1,
+          "receivers": 161,
+          "receiver_depth_m": 0,
+          "element_m": 2,
+          "dt_s": 2.5e-05,
+          "nstep": 24000,
+          "sample_stride": 8,
+          "snapshot_stride": 200,
+          "boundary": "stacey"
+        },
+        "regions": [
+          {
+            "id": "tunnel",
+            "shape": {
+              "kind": "circle",
+              "center_m": [
+                180,
+                -18
+              ],
+              "radius_m": 8,
+              "patch_halfwidth_m": 10
+            },
+            "interior": {
+              "kind": "fluid",
+              "name": "空气候选",
+              "rho_kg_m3": 1.2,
+              "sound_speed_m_s": 343.0,
+              "reference": "约20°C常压；用户应按实际条件编辑"
+            }
+          }
+        ],
+        "surface_warp_depth_m": null
+      },
+      "case_sha256": "aeb95c4e201d6c0536ae8181060537a6b4a47285241961bdcb64888d454dc20f",
+      "checks": [
+        {
+          "label": "完整记录、洞壁与等权 PS/FH",
+          "status": "指定输入已算并核查",
+          "detail": "声固耦合 40 边，记录洞内声压。 161 道、3000 点/道、121 帧。与无洞参考的全记录 Vz 相对 L2 差 41.3%。",
+          "report": "qc/tunnel_shapes/metrics.json",
+          "report_sha256": "a9065cf43cdca5636a4769c5d45731279513fccae2dbb3fc83fcab4ada557494"
+        }
+      ],
+      "limitation": "限当前断面、材料、阵列和0.6 s记录。局部网格、时间步、远边界收敛和衬砌效应未验证。",
+      "backend_evidence": {
+        "report": "qc/tunnel_shapes/metrics.json",
+        "report_sha256": "a9065cf43cdca5636a4769c5d45731279513fccae2dbb3fc83fcab4ada557494",
+        "key": "backend"
+      }
+    },
+    {
+      "case": {
+        "schema": "region_geometry_v1",
+        "model": {
+          "schema": 1,
+          "physics": "elastic",
+          "material_model": "isotropic",
+          "width_m": 420,
+          "layers": [
+            [
+              220,
+              1000,
+              500,
+              1800
+            ]
+          ],
+          "surface": [],
+          "interface_relief": [],
+          "shot_x_m": 130,
+          "shot_depth_m": 0,
+          "source_mode": "surface_force",
+          "f0_hz": 25,
+          "source_t0_s": 0.12,
+          "first_x_m": 138,
+          "spacing_m": 1,
+          "receivers": 161,
+          "receiver_depth_m": 0,
+          "element_m": 2,
+          "dt_s": 2.5e-05,
+          "nstep": 24000,
+          "sample_stride": 8,
+          "snapshot_stride": 200,
+          "boundary": "stacey"
+        },
+        "regions": [
+          {
+            "id": "tunnel",
+            "shape": {
+              "kind": "circle",
+              "center_m": [
+                180,
+                -18
+              ],
+              "radius_m": 8,
+              "patch_halfwidth_m": 10
+            },
+            "interior": {
+              "kind": "traction_free"
+            }
+          }
+        ],
+        "surface_warp_depth_m": null
+      },
+      "case_sha256": "6e2a21de5c8ba79673431d77ce8fad588fba8b19c25fe19d4947ac246514f831",
+      "checks": [
+        {
+          "label": "完整记录、洞壁与等权 PS/FH",
+          "status": "指定输入已算并核查",
+          "detail": "无牵引洞壁 40 边，洞内无单元。 161 道、3000 点/道、121 帧。与无洞参考的全记录 Vz 相对 L2 差 41.3%。",
+          "report": "qc/tunnel_shapes/metrics.json",
+          "report_sha256": "a9065cf43cdca5636a4769c5d45731279513fccae2dbb3fc83fcab4ada557494"
+        }
+      ],
+      "limitation": "限当前断面、材料、阵列和0.6 s记录。局部网格、时间步、远边界收敛和衬砌效应未验证。",
+      "backend_evidence": {
+        "report": "qc/tunnel_shapes/metrics.json",
+        "report_sha256": "a9065cf43cdca5636a4769c5d45731279513fccae2dbb3fc83fcab4ada557494",
+        "key": "backend"
+      }
+    },
+    {
+      "case": {
+        "schema": "region_geometry_v1",
+        "model": {
+          "schema": 1,
+          "physics": "elastic",
+          "material_model": "isotropic",
+          "width_m": 420,
+          "layers": [
+            [
+              220,
+              1000,
+              500,
+              1800
+            ]
+          ],
+          "surface": [],
+          "interface_relief": [],
+          "shot_x_m": 130,
+          "shot_depth_m": 0,
+          "source_mode": "surface_force",
+          "f0_hz": 25,
+          "source_t0_s": 0.12,
+          "first_x_m": 138,
+          "spacing_m": 1,
+          "receivers": 161,
+          "receiver_depth_m": 0,
+          "element_m": 2,
+          "dt_s": 2.5e-05,
+          "nstep": 24000,
+          "sample_stride": 8,
+          "snapshot_stride": 200,
+          "boundary": "stacey"
+        },
+        "regions": [
+          {
+            "id": "tunnel",
+            "shape": {
+              "kind": "circle",
+              "center_m": [
+                180,
+                -18
+              ],
+              "radius_m": 8,
+              "patch_halfwidth_m": 10
+            },
+            "interior": {
+              "kind": "fluid",
+              "name": "清水候选",
+              "rho_kg_m3": 998.0,
+              "sound_speed_m_s": 1482.0,
+              "reference": "约20°C；用户应按实际条件编辑"
+            }
+          }
+        ],
+        "surface_warp_depth_m": null
+      },
+      "case_sha256": "f321dfc37df8278e397903d8b11e7735bbe8c94ddf0a052e09fb54e097181b8d",
+      "checks": [
+        {
+          "label": "完整记录、洞壁与等权 PS/FH",
+          "status": "指定输入已算并核查",
+          "detail": "声固耦合 40 边，记录洞内声压。 161 道、3000 点/道、121 帧。与无洞参考的全记录 Vz 相对 L2 差 55.4%。",
+          "report": "qc/tunnel_shapes/metrics.json",
+          "report_sha256": "a9065cf43cdca5636a4769c5d45731279513fccae2dbb3fc83fcab4ada557494"
+        }
+      ],
+      "limitation": "限当前断面、材料、阵列和0.6 s记录。局部网格、时间步、远边界收敛和衬砌效应未验证。",
+      "backend_evidence": {
+        "report": "qc/tunnel_shapes/metrics.json",
+        "report_sha256": "a9065cf43cdca5636a4769c5d45731279513fccae2dbb3fc83fcab4ada557494",
+        "key": "backend"
+      }
+    },
+    {
+      "case": {
+        "schema": "region_geometry_v1",
+        "model": {
+          "schema": 1,
+          "physics": "elastic",
+          "material_model": "isotropic",
+          "width_m": 420,
+          "layers": [
+            [
+              220,
+              1000,
+              500,
+              1800
+            ]
+          ],
+          "surface": [],
+          "interface_relief": [],
+          "shot_x_m": 130,
+          "shot_depth_m": 0,
+          "source_mode": "surface_force",
+          "f0_hz": 25,
+          "source_t0_s": 0.12,
+          "first_x_m": 138,
+          "spacing_m": 1,
+          "receivers": 161,
+          "receiver_depth_m": 0,
+          "element_m": 2,
+          "dt_s": 2.5e-05,
+          "nstep": 24000,
+          "sample_stride": 8,
+          "snapshot_stride": 200,
+          "boundary": "stacey"
+        },
+        "regions": [
+          {
+            "id": "tunnel",
+            "shape": {
+              "kind": "rectangle",
+              "bounds_m": [
+                170,
+                190,
+                -20,
+                -10
+              ]
+            },
+            "interior": {
+              "kind": "fluid",
+              "name": "空气候选",
+              "rho_kg_m3": 1.2,
+              "sound_speed_m_s": 343.0,
+              "reference": "约20°C常压；用户应按实际条件编辑"
+            }
+          }
+        ],
+        "surface_warp_depth_m": null
+      },
+      "case_sha256": "b132f63ac28cadc1e99f5b2b06679c9c0cf1146aeeb1ace1fb361f5a7ec0a65c",
+      "checks": [
+        {
+          "label": "完整记录、洞壁与等权 PS/FH",
+          "status": "指定输入已算并核查",
+          "detail": "声固耦合 30 边，记录洞内声压。 161 道、3000 点/道、121 帧。与无洞参考的全记录 Vz 相对 L2 差 70.0%。",
+          "report": "qc/tunnel_shapes/metrics.json",
+          "report_sha256": "a9065cf43cdca5636a4769c5d45731279513fccae2dbb3fc83fcab4ada557494"
+        }
+      ],
+      "limitation": "限当前断面、材料、阵列和0.6 s记录。局部网格、时间步、远边界收敛和衬砌效应未验证。",
+      "backend_evidence": {
+        "report": "qc/tunnel_shapes/metrics.json",
+        "report_sha256": "a9065cf43cdca5636a4769c5d45731279513fccae2dbb3fc83fcab4ada557494",
+        "key": "backend"
+      }
+    },
+    {
+      "case": {
+        "schema": "region_geometry_v1",
+        "model": {
+          "schema": 1,
+          "physics": "elastic",
+          "material_model": "isotropic",
+          "width_m": 420,
+          "layers": [
+            [
+              220,
+              1000,
+              500,
+              1800
+            ]
+          ],
+          "surface": [],
+          "interface_relief": [],
+          "shot_x_m": 130,
+          "shot_depth_m": 0,
+          "source_mode": "surface_force",
+          "f0_hz": 25,
+          "source_t0_s": 0.12,
+          "first_x_m": 138,
+          "spacing_m": 1,
+          "receivers": 161,
+          "receiver_depth_m": 0,
+          "element_m": 2,
+          "dt_s": 2.5e-05,
+          "nstep": 24000,
+          "sample_stride": 8,
+          "snapshot_stride": 200,
+          "boundary": "stacey"
+        },
+        "regions": [
+          {
+            "id": "tunnel",
+            "shape": {
+              "kind": "rectangle",
+              "bounds_m": [
+                170,
+                190,
+                -20,
+                -10
+              ]
+            },
+            "interior": {
+              "kind": "traction_free"
+            }
+          }
+        ],
+        "surface_warp_depth_m": null
+      },
+      "case_sha256": "038d020a1d28856d34d9f9c86516e09f68882715a367684657fa43f0c2ca32a5",
+      "checks": [
+        {
+          "label": "完整记录、洞壁与等权 PS/FH",
+          "status": "指定输入已算并核查",
+          "detail": "无牵引洞壁 30 边，洞内无单元。 161 道、3000 点/道、121 帧。与无洞参考的全记录 Vz 相对 L2 差 70.0%。",
+          "report": "qc/tunnel_shapes/metrics.json",
+          "report_sha256": "a9065cf43cdca5636a4769c5d45731279513fccae2dbb3fc83fcab4ada557494"
+        }
+      ],
+      "limitation": "限当前断面、材料、阵列和0.6 s记录。局部网格、时间步、远边界收敛和衬砌效应未验证。",
+      "backend_evidence": {
+        "report": "qc/tunnel_shapes/metrics.json",
+        "report_sha256": "a9065cf43cdca5636a4769c5d45731279513fccae2dbb3fc83fcab4ada557494",
+        "key": "backend"
+      }
+    },
+    {
+      "case": {
+        "schema": "region_geometry_v1",
+        "model": {
+          "schema": 1,
+          "physics": "elastic",
+          "material_model": "isotropic",
+          "width_m": 420,
+          "layers": [
+            [
+              220,
+              1000,
+              500,
+              1800
+            ]
+          ],
+          "surface": [],
+          "interface_relief": [],
+          "shot_x_m": 130,
+          "shot_depth_m": 0,
+          "source_mode": "surface_force",
+          "f0_hz": 25,
+          "source_t0_s": 0.12,
+          "first_x_m": 138,
+          "spacing_m": 1,
+          "receivers": 161,
+          "receiver_depth_m": 0,
+          "element_m": 2,
+          "dt_s": 2.5e-05,
+          "nstep": 24000,
+          "sample_stride": 8,
+          "snapshot_stride": 200,
+          "boundary": "stacey"
+        },
+        "regions": [
+          {
+            "id": "tunnel",
+            "shape": {
+              "kind": "rectangle",
+              "bounds_m": [
+                170,
+                190,
+                -20,
+                -10
+              ]
+            },
+            "interior": {
+              "kind": "fluid",
+              "name": "清水候选",
+              "rho_kg_m3": 998.0,
+              "sound_speed_m_s": 1482.0,
+              "reference": "约20°C；用户应按实际条件编辑"
+            }
+          }
+        ],
+        "surface_warp_depth_m": null
+      },
+      "case_sha256": "c88a929d2a7f6cb7762a0499d4e8cc0ad02cd880f2bbbea471ab2c4ba3647f80",
+      "checks": [
+        {
+          "label": "完整记录、洞壁与等权 PS/FH",
+          "status": "指定输入已算并核查",
+          "detail": "声固耦合 30 边，记录洞内声压。 161 道、3000 点/道、121 帧。与无洞参考的全记录 Vz 相对 L2 差 101.5%。",
+          "report": "qc/tunnel_shapes/metrics.json",
+          "report_sha256": "a9065cf43cdca5636a4769c5d45731279513fccae2dbb3fc83fcab4ada557494"
+        }
+      ],
+      "limitation": "限当前断面、材料、阵列和0.6 s记录。局部网格、时间步、远边界收敛和衬砌效应未验证。",
+      "backend_evidence": {
+        "report": "qc/tunnel_shapes/metrics.json",
+        "report_sha256": "a9065cf43cdca5636a4769c5d45731279513fccae2dbb3fc83fcab4ada557494",
+        "key": "backend"
+      }
+    },
+    {
+      "case": {
+        "schema": "region_geometry_v1",
+        "model": {
+          "schema": 1,
+          "physics": "elastic",
+          "material_model": "isotropic",
+          "width_m": 420,
+          "layers": [
+            [
+              220,
+              1000,
+              500,
+              1800
+            ]
+          ],
+          "surface": [],
+          "interface_relief": [],
+          "shot_x_m": 130,
+          "shot_depth_m": 0,
+          "source_mode": "surface_force",
+          "f0_hz": 25,
+          "source_t0_s": 0.12,
+          "first_x_m": 138,
+          "spacing_m": 1,
+          "receivers": 161,
+          "receiver_depth_m": 0,
+          "element_m": 2,
+          "dt_s": 2.5e-05,
+          "nstep": 24000,
+          "sample_stride": 8,
+          "snapshot_stride": 200,
+          "boundary": "stacey"
+        },
+        "regions": [
+          {
+            "id": "tunnel",
+            "shape": {
+              "kind": "circle",
+              "center_m": [
+                180,
+                -14
+              ],
+              "radius_m": 4,
+              "patch_halfwidth_m": 6
+            },
+            "interior": {
+              "kind": "fluid",
+              "name": "空气候选",
+              "rho_kg_m3": 1.2,
+              "sound_speed_m_s": 343.0,
+              "reference": "约20°C常压；用户应按实际条件编辑"
+            }
+          }
+        ],
+        "surface_warp_depth_m": null
+      },
+      "case_sha256": "9f08d5e9be6febfeacd44a32939348478225dbcd2f96877d0860a5af350acf27",
+      "checks": [
+        {
+          "label": "完整记录、洞壁与等权 PS/FH",
+          "status": "指定输入已算并核查",
+          "detail": "声固耦合 24 边，记录洞内声压。 161 道、3000 点/道、121 帧。与无洞参考的全记录 Vz 相对 L2 差 25.4%。",
+          "report": "qc/tunnel_shapes/metrics.json",
+          "report_sha256": "a9065cf43cdca5636a4769c5d45731279513fccae2dbb3fc83fcab4ada557494"
+        }
+      ],
+      "limitation": "限当前断面、材料、阵列和0.6 s记录。局部网格、时间步、远边界收敛和衬砌效应未验证。",
+      "backend_evidence": {
+        "report": "qc/tunnel_shapes/metrics.json",
+        "report_sha256": "a9065cf43cdca5636a4769c5d45731279513fccae2dbb3fc83fcab4ada557494",
+        "key": "backend"
+      }
+    },
+    {
+      "case": {
+        "schema": "region_geometry_v1",
+        "model": {
+          "schema": 1,
+          "physics": "elastic",
+          "material_model": "isotropic",
+          "width_m": 1000,
+          "layers": [
+            [
+              480,
+              1000,
+              500,
+              1800
+            ]
+          ],
+          "surface": [],
+          "interface_relief": [],
+          "shot_x_m": 340,
+          "shot_depth_m": 0,
+          "source_mode": "surface_force",
+          "f0_hz": 25,
+          "source_t0_s": 0.12,
+          "first_x_m": 348,
+          "spacing_m": 1,
+          "receivers": 321,
+          "receiver_depth_m": 0,
+          "element_m": 2,
+          "dt_s": 2.5e-05,
+          "nstep": 41600,
+          "sample_stride": 8,
+          "snapshot_stride": 400,
+          "boundary": "stacey"
+        },
+        "regions": [
+          {
+            "id": "tunnel",
+            "shape": {
+              "kind": "circle",
+              "center_m": [
+                390,
+                -18
+              ],
+              "radius_m": 8,
+              "patch_halfwidth_m": 10
+            },
+            "interior": {
+              "kind": "fluid",
+              "name": "空气候选",
+              "rho_kg_m3": 1.2,
+              "sound_speed_m_s": 343.0,
+              "reference": "约20°C常压；用户应按实际条件编辑"
+            }
+          }
+        ],
+        "surface_warp_depth_m": null
+      },
+      "case_sha256": "263a23d233a8f79d55eab47d6d7689b1201c21534afaf4c2b1968b4700025f15",
+      "checks": [
+        {
+          "label": "空气及同网格无洞对照的等权 PS/FH",
+          "status": "已核查指定孔径的单炮与频散",
+          "detail": "321 道、1 m 道距、5200 点/道。25 Hz 的 320 m PS 主瓣宽度，有洞 23.8 m/s、无洞 24.3 m/s。",
+          "report": "qc/tunnel_array320/metrics.json",
+          "report_sha256": "3104f7ac150b7cd1e4fc1c719aa1d83db9d519595a7f296f24e270f91a452c79"
+        }
+      ],
+      "limitation": "同一单炮截取 160 m 和 320 m 孔径。远道完整晚段、局部网格及洞壁精度仍待独立验证。",
+      "backend_evidence": {
+        "report": "qc/tunnel_array320/metrics.json",
+        "report_sha256": "3104f7ac150b7cd1e4fc1c719aa1d83db9d519595a7f296f24e270f91a452c79",
+        "key": "backend"
+      }
+    }
+  ]
+}

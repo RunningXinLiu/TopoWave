@@ -1,0 +1,21 @@
+{
+  "schema": "surface_wave_analysis_v1",
+  "options": {
+    "fmin": 12.5,
+    "fmax": 50,
+    "cmin": 300,
+    "cmax": 1100,
+    "dc": 1.0,
+    "vslow": 300,
+    "vfast": 1100,
+    "pad": 0.06,
+    "right": true,
+    "gated": true,
+    "min_offset": 0,
+    "max_offset": 0,
+    "spatial_weighting": "equal",
+    "method": "PS"
+  },
+  "origin_model_sha256": "53c69a28b8cc40f9597ff0da8494a1aa38252ae314663229089bf4e145b9b264",
+  "note": "600 m/2 m阵列，2.4 s完整记录：对独立VTI参考Vx 0.6601%、Vz 0.6910%；同域h4→h2及等权PS/FH通过本轮门槛。仅限此模型、网格、边界和双精度后端；弱尾波局部误差与旁瓣仍保留，不是任意模型认证。"
+}

@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "physics": "elastic",
+  "material_model": "isotropic",
+  "domain_kind": "free_plate",
+  "width_m": 5000,
+  "layers": [
+    [
+      12,
+      1000,
+      500,
+      1800
+    ]
+  ],
+  "surface": [],
+  "interface_relief": [],
+  "shot_x_m": 2200,
+  "shot_depth_m": 0,
+  "source_mode": "surface_force",
+  "f0_hz": 25,
+  "source_t0_s": 0.12,
+  "first_x_m": 2220,
+  "spacing_m": 2.0,
+  "receivers": 301,
+  "receiver_depth_m": 0,
+  "element_m": 2.0,
+  "dt_s": 5e-05,
+  "nstep": 80000,
+  "sample_stride": 10,
+  "snapshot_stride": 4000,
+  "boundary": "stacey"
+}

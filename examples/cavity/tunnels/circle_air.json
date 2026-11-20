@@ -1,0 +1,56 @@
+{
+  "schema": "region_geometry_v1",
+  "model": {
+    "schema": 1,
+    "physics": "elastic",
+    "material_model": "isotropic",
+    "width_m": 420,
+    "layers": [
+      [
+        220,
+        1000,
+        500,
+        1800
+      ]
+    ],
+    "surface": [],
+    "interface_relief": [],
+    "shot_x_m": 130,
+    "shot_depth_m": 0,
+    "source_mode": "surface_force",
+    "f0_hz": 25,
+    "source_t0_s": 0.12,
+    "first_x_m": 138,
+    "spacing_m": 1,
+    "receivers": 161,
+    "receiver_depth_m": 0,
+    "element_m": 2,
+    "dt_s": 2.5e-05,
+    "nstep": 24000,
+    "sample_stride": 8,
+    "snapshot_stride": 200,
+    "boundary": "stacey"
+  },
+  "regions": [
+    {
+      "id": "tunnel",
+      "shape": {
+        "kind": "circle",
+        "center_m": [
+          180,
+          -18
+        ],
+        "radius_m": 8,
+        "patch_halfwidth_m": 10
+      },
+      "interior": {
+        "kind": "fluid",
+        "name": "空气候选",
+        "rho_kg_m3": 1.2,
+        "sound_speed_m_s": 343.0,
+        "reference": "约20°C常压；用户应按实际条件编辑"
+      }
+    }
+  ],
+  "surface_warp_depth_m": null
+}

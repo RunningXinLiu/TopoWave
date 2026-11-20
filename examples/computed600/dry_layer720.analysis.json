@@ -1,0 +1,21 @@
+{
+  "schema": "surface_wave_analysis_v1",
+  "options": {
+    "fmin": 15,
+    "fmax": 50,
+    "cmin": 300,
+    "cmax": 800,
+    "dc": 1.0,
+    "vslow": 350,
+    "vfast": 650,
+    "pad": 0.04,
+    "right": true,
+    "gated": true,
+    "min_offset": 0,
+    "max_offset": 0,
+    "spatial_weighting": "equal",
+    "method": "PS"
+  },
+  "origin_model_sha256": "926400bf861c1ebd6e522d8ac2cc822802468d1455c4adb41baf0346906f571b",
+  "note": "600 m等权；完整记录已查看。原窗口仅保留约50%平方范数，末段仍有强尾波；窗口/时长与数值收敛未通过验收。"
+}

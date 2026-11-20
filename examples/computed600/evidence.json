@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "entries": [
+    {
+      "file": "vti_flat_checked.json",
+      "template_sha256": "a19de2d355cc5147dc676e06243e98c2aac101cf3fcd2265fb91a16cb6808b86",
+      "scientific_status": "passed_scoped_waveform_and_spectra",
+      "label": "600 m/2 m阵列，2.4 s完整记录：对独立VTI参考Vx 0.6601%、Vz 0.6910%；同域h4→h2及等权PS/FH通过本轮门槛。仅限此模型、网格、边界和双精度后端；弱尾波局部误差与旁瓣仍保留，不是任意模型认证。",
+      "checks": [
+        {
+          "name": "完整记录独立参考与同域网格控制",
+          "state": "passed",
+          "summary": "600 m/2 m阵列，2.4 s完整记录：对独立VTI参考Vx 0.6601%、Vz 0.6910%；同域h4→h2及等权PS/FH通过本轮门槛。仅限此模型、网格、边界和双精度后端；弱尾波局部误差与旁瓣仍保留，不是任意模型认证。",
+          "report": "qc/closeout_controls_20261113/runs/vti_matched_h2/controls/report.json"
+        },
+        {
+          "name": "弱尾波逐时逐道精度与无旁瓣",
+          "state": "not_certified",
+          "summary": "总体L2门槛不保证每道每时刻均<1%，仍有弱尾波及旁瓣。",
+          "report": "experiments/closeout_controls_20261113/RESULTS_zh.md"
+        }
+      ],
+      "backend_config_key": "ti_layered_backend",
+      "backend_sha256": {
+        "xmeshfem2D": "4f75f08773bf8ee366312ac246584021f6e92074b6bd11d575e023c4fbe1928a",
+        "xspecfem2D": "967ad0d518da9157b174167547c42d457ede2a18b6e1b9f545817e3eb51f1f4f"
+      },
+      "source_report": "qc/closeout_controls_20261113/runs/vti_matched_h2/controls/report.json",
+      "source_report_sha256": "1e5b97a77437f10517ea97e9e4db7f5d4dde628e781b6564a45a110b5f2f3803"
+    }
+  ]
+}

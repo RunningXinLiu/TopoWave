@@ -1,0 +1,5 @@
+{
+  "template_sha256": "dd34f34c444375eca3319189dc36830d5817c606ae6155ee32b6d13f41c6f06f",
+  "label": "CPML频移候选：原三层平地4.5秒内未见原增长；完整Vz误差3.36%，未达1%；PS/FH功率筛查通过。其他模型、长记录和地形未验收。",
+  "source": "experiments/cpml_alpha_20261110/RESULTS_zh.md"
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "active_shot_template_v1",
+  "model": {
+    "schema": 1,
+    "physics": "elastic",
+    "width_m": 880.0,
+    "layers": [
+      [
+        24.0,
+        1000.0,
+        500.0,
+        1800.0
+      ],
+      [
+        96.0,
+        1400.0,
+        800.0,
+        2000.0
+      ]
+    ],
+    "surface": [],
+    "interface_relief": [],
+    "shot_x_m": 100,
+    "shot_depth_m": 0.0,
+    "source_mode": "surface_force",
+    "f0_hz": 25.0,
+    "source_t0_s": 0.12,
+    "first_x_m": 120.0,
+    "spacing_m": 2.0,
+    "receivers": 301,
+    "receiver_depth_m": 0.0,
+    "element_m": 2.0,
+    "elements_per_layer": [
+      12,
+      48
+    ],
+    "dt_s": 0.0001,
+    "nstep": 24000,
+    "sample_stride": 4,
+    "snapshot_stride": 1200,
+    "boundary": "cpml",
+    "pml_elements": 20,
+    "cpml_alpha_factor": 2.0,
+    "damping_change_factor_elastic": 1.0,
+    "material_model": "isotropic",
+    "attenuation": {
+      "enabled": true,
+      "n_sls": 3,
+      "velocity_reference": "source_f0"
+    },
+    "material_properties": [
+      {
+        "qkappa": 100.0,
+        "qmu": 50.0
+      },
+      {
+        "qkappa": 100.0,
+        "qmu": 50.0
+      }
+    ]
+  },
+  "analysis": {
+    "schema": "surface_wave_analysis_v1",
+    "options": {
+      "fmin": 12.5,
+      "fmax": 50,
+      "cmin": 300,
+      "cmax": 1100,
+      "dc": 1.0,
+      "vslow": 300,
+      "vfast": 1100,
+      "pad": 0.06,
+      "right": true,
+      "gated": true,
+      "min_offset": 0,
+      "max_offset": 0,
+      "spatial_weighting": "equal",
+      "method": "PS"
+    },
+    "origin_model_sha256": "2949d59b80d520b8b8f0bd37361d69dfc850d9acc6eb87c27757a5dd9df3b5c3",
+    "note": "600 m等权；完整记录和PS/FH图已查看。历史重叠检查不等于全部新增远道/晚段的独立精度验收；仍有旁瓣。"
+  }
+}

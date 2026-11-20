@@ -1,0 +1,5 @@
+{
+  "upstream_sha256": "ccf5fccfc9c434c609bafa87257706cdd585a96cd1ff866fe32d09599676b6e0",
+  "candidate_sha256": "4c45bd372693d68398434386be43f2ff5f17331c235460bb27c69323d340aa5b",
+  "scope": "serial research candidate, no production integration; positive alpha override only; unchanged default"
+}

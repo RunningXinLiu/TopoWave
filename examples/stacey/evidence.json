@@ -1,0 +1,6 @@
+{
+  "template_sha256": "67c617b627b951acfef1189969c0b1c72be74022592d7130d28a781bba492234",
+  "source": "pml_order_20261107/run_stacey_left_far",
+  "scope": "Equivalent flat geometry, source, materials, mesh and numerical inputs; arbitrary edits invalidate",
+  "metrics": "preview/demo-sem-20261106/stacey_far/metrics.json"
+}

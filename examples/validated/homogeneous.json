@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "width_m": 480,
+  "surface": [],
+  "layers": [
+    [
+      20,
+      900,
+      300,
+      1750
+    ],
+    [
+      160,
+      900,
+      300,
+      1750
+    ]
+  ],
+  "shot_x_m": 120,
+  "shot_depth_m": 0,
+  "f0_hz": 12,
+  "first_x_m": 130,
+  "spacing_m": 2,
+  "receivers": 61,
+  "receiver_depth_m": 0,
+  "element_m": 4,
+  "dt_s": 0.0001,
+  "nstep": 20200,
+  "sample_stride": 8,
+  "elements_per_layer": [
+    8,
+    42
+  ],
+  "source_mode": "surface_force",
+  "boundary": "cpml",
+  "pml_elements": 12,
+  "source_t0_s": 0.2,
+  "snapshot_stride": 500
+}

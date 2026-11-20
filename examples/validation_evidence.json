@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "entries": [
+    {
+      "path": "qc/layered_terrain/geometry.png",
+      "label": "地形与材料",
+      "scope": "三层平地、山丘、谷地的有洞与无洞配对算例。",
+      "sha256": "5f9bd1c1d4a234893cd9b0c3581a53c1f3311b97b5be6162828949d4659b2db8"
+    },
+    {
+      "path": "qc/layered_terrain/wavefield.png",
+      "label": "波场快照",
+      "scope": "三层平地、山丘、谷地的有洞与无洞配对算例。",
+      "sha256": "e9ebb74e1d3c240aeb2808fff1bf6f150b5be8df9d4cf7eb83c9cce35ba5b098"
+    },
+    {
+      "path": "qc/layered_terrain/record.png",
+      "label": "完整单炮与面波窗",
+      "scope": "三层平地、山丘、谷地的有洞与无洞配对算例。",
+      "sha256": "a835ed9c44395830a6812a1befe3a21b527f3bfc2876335d1a432435b7c9cd6a"
+    },
+    {
+      "path": "qc/layered_terrain/PS_theory.png",
+      "label": "PS 与一维理论参考",
+      "scope": "三层平地、山丘、谷地的有洞与无洞配对算例。",
+      "sha256": "90532113128fecb85449f0d8f5baf6f660b719fd57eed8bf7e9f434d4a4a2f9d"
+    },
+    {
+      "path": "qc/layered_terrain/FH_theory.png",
+      "label": "FH 与一维理论参考",
+      "scope": "三层平地、山丘、谷地的有洞与无洞配对算例。",
+      "sha256": "04be2554cdc0b40552f5881fb7f0820a3b9ec8f8af1cd6ca93f2752a69f0c04d"
+    }
+  ]
+}
